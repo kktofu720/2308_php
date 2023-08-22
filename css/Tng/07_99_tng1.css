@@ -1,0 +1,22 @@
+body {
+	font-size: 14px;
+}
+/* body에 14px로 고정해둠 */
+.container {
+	border: 1px solid #000;
+	width: 450px;
+}
+ul {
+	line-height: 2rem;
+	list-style-type: none;
+}
+
+span {
+	font-weight: 900;
+	font-size: 1.2rem;
+	color: #ad3000;
+
+}
+.span-orange {
+	color: orange;
+}

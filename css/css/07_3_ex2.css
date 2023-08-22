@@ -1,0 +1,25 @@
+.deco {
+	text-decoration: none; 
+	/* 아무 효과를 주지 않는다 */
+	text-decoration: underline;
+	/* 텍스트에 밑줄 */
+	text-decoration: line-through;
+}
+
+
+.height {
+	line-height: 50px;
+}
+.left {
+text-align: left;	
+}
+.right {
+	text-align: right;
+}
+.center {
+	background-color: blanchedalmond;
+	height: 300px;
+	line-height: 300px;
+	text-align: center;
+} 
+/* line-height 줄간격 */

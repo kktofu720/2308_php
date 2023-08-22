@@ -1,0 +1,17 @@
+.tran {
+	text-transform: capitalize;
+	text-transform: uppercase;
+	text-transform: lowercase;
+}
+
+.spacing {
+	letter-spacing: 1.2em;
+}
+
+.w_spacing {
+	word-spacing: 10px;
+}
+
+.shadow {
+	text-shadow: -5px -5px 5px #000000;
+}

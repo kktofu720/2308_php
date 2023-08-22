@@ -1,0 +1,21 @@
+* {
+	color: skyblue;
+}
+/* 타입 선택자 */
+h1 {
+	color: red;
+}
+
+/* 클래스 선택자 */
+.font-color {
+	color: orange;
+}
+
+/* ID 선택자 */
+#p1 {
+	color: black;
+}
+/* 그룹 선택자 */
+em, strong {
+	color: purple;
+}

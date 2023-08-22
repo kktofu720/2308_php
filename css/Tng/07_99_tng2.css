@@ -1,0 +1,31 @@
+.bc-black {
+background-color: black;
+}
+
+.fc-white {
+	color: white;
+}
+
+.container {
+	width: 600px;
+}
+
+.header {
+	padding: 10px;
+}
+h2 {
+	color: #ff0000;
+	font-size: 1.5em;
+}
+.fc-blue {
+	color: #0000ff;
+}
+.fc-orange {
+	color: orange;
+}
+.smalltext {
+	font-size: 0.7em;
+}
+.border {
+	text-align: center;
+}
