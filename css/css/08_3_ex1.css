@@ -1,0 +1,23 @@
+.container_1 {
+	border: 5px solid #000;
+	width: 400px;
+	margin: 20px;
+}
+.container_2 {
+	border: 5px solid #000;
+	width: 400px;
+	margin: 20px;
+}
+h1, p {
+	border: 1px solid#000;
+	width: 180px;
+	margin: 10px auto;
+}
+/* auto : 상하좌우 동일하게 셋팅해줌 */
+/* margin 중첩현상 : 세로로 셋팅할 때 margin이 큰쪽으로 중첩
+ex) 1컨텐츠 margin 10px 2컨텐츠 margin 20px일 때 사이에 20px 으로 중첩 */
+span {
+	border: 1px solid#000;
+	width: 180px;
+	margin: 10px;
+}

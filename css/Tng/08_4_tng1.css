@@ -1,0 +1,13 @@
+ul {
+	list-style-type: none;
+	/* display: flex; */
+}
+.li {
+	width: 100px;
+	height: 100px;
+	background-color: gray;
+	display: inline-block;
+	text-align: center;
+	line-height: 100px;
+	margin-right: -6px;
+}

@@ -1,0 +1,35 @@
+div {
+	width: 200px;
+	height: 20px;
+	margin: 5px;	
+}
+.div-1 {
+	border-style: none;
+}
+.div-2 {
+	border-style: solid;
+	border-color: blueviolet;
+	border-width: 5px 10px 15px;
+}
+/* border-width : 2개만 적으면 상하 좌우, 4개 적으면 상 우 하 좌로 시계방향 */
+.div-3 {
+	border-style: dotted;
+	border-width: 5px;
+}
+.div-4 {
+	border-style: dashed;
+	border-width: 5px;
+}
+.div-5 {
+	border-style: double;
+	border-width: 5px;
+}
+.div-6 {
+	height: 200px;
+	border: 3px solid #f58f8f;
+	border-radius: 10px;
+	/* border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 30px; */
+}
+/* border-radius : 꼭짓점 둥글게 .. 숫자 클수록 원형에 가까움 */

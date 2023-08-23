@@ -1,0 +1,27 @@
+.none {
+	display: none;
+}
+/* !!중요!! none을 하면 화면에 사라지고 영역자체가 사라짐(영역에 포함된 자식태그들도 안보임) */
+.block {
+	display: block;
+}
+span {
+	border: 1px solid #000;
+	width: 150px;
+}
+/* width는 inline 레벨 요소에 적용x
+block 레벨 요소에는 적용o */
+
+.inline {
+	border: 1px solid #000;
+	display: inline; 
+}
+div {
+	border: 5px solid #000;
+	padding: 10px;
+}
+.inline-block {
+	border: 1px solid #000;
+	width: 150px;
+	display: inline-block;
+}

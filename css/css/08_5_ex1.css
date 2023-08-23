@@ -1,0 +1,47 @@
+main, section, article {
+	padding: 20px;
+}
+main {
+	background-color: rgb(189, 184, 115);
+	
+}
+section {
+	background-color: rgb(222, 240, 241);
+	
+}
+article {
+	background-color: rgb(243, 165, 136);
+	position: relative;
+	height: 1000px;
+	
+}
+.div_static {
+	background-color: bisque;
+	position: static;
+}
+/* static이 디폴프값 */
+.div_relative {
+	background-color: rgb(238, 193, 230);
+	position: relative;
+	left: 0px;
+	top: 0;
+}
+.div_absolute {
+	background-color: cyan;
+	position: absolute;
+	top: 0px;
+	left: 0;
+	/* z-index: -1; */
+} 
+.div_fixed {
+	background-color: rgb(130, 175, 175);
+	position: fixed;
+	bottom: 10%;
+	right: 10%;
+}
+.div_sticky {
+	background-color: rgb(241, 193, 70);
+	position: sticky;
+	top: 0;
+}
+/* 스크롤 내렸을 때 상단에 고정된 상태 */

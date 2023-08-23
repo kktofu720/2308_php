@@ -1,0 +1,38 @@
+main {
+	width: 600px;
+}
+
+header {
+	background-color :aqua;
+	height: 80px;
+	width: 600px;
+}
+.side_1 {
+	background-color: antiquewhite;
+	float: left;
+	height: 500px;
+	width: 100px;
+}
+
+.side_2 {
+	background-color: antiquewhite;
+	float: left;
+	height: 500px;
+	width: 100px;
+}
+
+article {
+	background-color: cornflowerblue;
+	width: 400px;
+	height: 500px;
+	float: left;
+
+}
+
+footer {
+	background-color: chartreuse;
+	width: 600px;
+	height: 80px;
+	clear: both;
+
+}
