@@ -1,0 +1,44 @@
+body {
+	background-color: black;
+}
+.container {
+	margin: 0 auto;
+	border: 1px solid #000;
+	width: 600px;
+	height: 700px;
+	background-color: white;
+	position: relative;
+	/* background : white url() no-repeat right bottom / 70% */
+	
+}
+
+h1 {
+	width: 500px;
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	color: white;
+	background-color: #004344;
+	margin: 10px 50px
+}
+h2 {
+	
+	text-align: center;
+}
+h3 {
+	margin: 10px;
+	color: red;
+}
+
+li {
+	list-style-type: none;
+}
+.img {
+	width: 400px;
+	height: 260px;
+	background-image: url(../img/cat2.jpg);
+	background-size: cover;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}

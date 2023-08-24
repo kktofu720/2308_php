@@ -39,6 +39,7 @@ article {
 	bottom: 10%;
 	right: 10%;
 }
+/* 스크롤 할 때 고정된 상태 */
 .div_sticky {
 	background-color: rgb(241, 193, 70);
 	position: sticky;

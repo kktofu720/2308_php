@@ -1,0 +1,8 @@
+h1 {
+	background-color: coral;
+	border: 10px dotted #000;
+	background-clip: padding-box;
+	width: 200px;
+	height: 100px;
+	padding: 20px;
+}

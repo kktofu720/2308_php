@@ -1,0 +1,32 @@
+.container {
+	border: 1px solid #000;
+	width: 600px;
+	height: 700px;
+	position: relative;
+}
+
+div {
+	border: 1px solid #000;
+	width: 200px;
+	height: 200px;
+}
+.pos1 {
+	
+	position: absolute;
+	left: 50px;
+	top: 50px;
+
+}
+.pos2 {
+	
+	position: absolute;
+	right: 80px;
+	top: 100px;
+}
+.pos3 {
+
+	position: absolute;
+	left: 50px;
+	bottom: 100px;
+}
+/* absolute를 사용할 때 relative를 기준점을 두고 사용해야함(부모) */
