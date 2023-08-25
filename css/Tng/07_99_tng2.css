@@ -6,8 +6,15 @@ background-color: black;
 	color: white;
 }
 
+.header border bc-black {
+	background-image: url();
+	background-color: rgba(0, 0, 0, 50);
+}
 .container {
+	border: 600px;
 	width: 600px;
+
+	
 }
 
 .header {
