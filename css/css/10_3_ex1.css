@@ -1,0 +1,47 @@
+a {
+	color: darkcyan;
+}
+
+a:link {
+	color: darkgoldenrod;
+}
+a:visited {
+	color: darkslateblue;
+}
+a:hover {
+	background-color: deepskyblue;
+}
+#input-1:focus {
+	outline: none;
+	border: 2px solid yellow;
+}
+input:checked + label {
+	color: orange;
+}
+/* label에 포케라는 글자를 색을주려면 input에 인접한 +을 줘서 */
+#target-1:target {
+	background-color: red;
+}
+/*terget 대상자를 클릭했을 때 적용됨 */
+
+.container :nth-child(4) {
+	color: darkred;
+}
+/* 나한테 있는 몇번째 자식이 선택됨 nth-child(숫자) */
+.container p:nth-of-type(2) {
+	color: green;
+}
+.container :not(p) {
+	color: cadetblue;
+}
+#label-2::after {
+	content: ' 중요';
+	color: crimson;
+}
+/* label에다가 글자를 넣고싶을 때 */
+.korean-1::first-letter {
+	background-color: black;
+}
+.korean-2::first-line {
+	background-color: black;
+}

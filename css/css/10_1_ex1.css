@@ -1,0 +1,20 @@
+header div span {
+	color: aqua;
+}
+/* 특정영역에 줄려면 띄어쓰기 해서 적음 
+상위요소 하위요소 */
+header>span {
+	color: blue;
+}
+/* >쓰면 직속자식에게만 적용
+부모요소>자식요소 */
+main span+p {
+	color: brown;
+}
+/* span태그(앞에적은태그)를 기준으로 바로 밑에 있는 형제에게만 적용
+형제요소+형제요소 p2 o p3 x */
+span~p {
+	color: blueviolet;
+}
+/* span태그를 기준으로 밑에 있는 전체형제에게 적용
+형제요소~형제요소 p2 o p3 o */

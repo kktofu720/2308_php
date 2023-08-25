@@ -1,0 +1,25 @@
+[target] {
+	color: green;
+}
+/* [속성명] : 특정 속성이 있는 요소 선택 */
+[target=daum] {
+	color: blue;
+}
+/* [속성명=속성값] :  */
+/* [class*=att_class] {
+	color: red;
+} */
+/* 일부가 일치하게 하는것 * */
+[class~=att_class] {
+	color: yellow;
+}
+[class|=att] {
+	color: darksalmon;
+}
+[class^=co] {
+	color: palevioletred;
+}
+[class$=k1] {
+	color: lime;
+}
+/* 속성명 주는 이것은 별로 중요하지 않음 굳이? */
