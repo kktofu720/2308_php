@@ -25,3 +25,17 @@ div {
 	width: 150px;
 	display: inline-block;
 }
+/* display : inline -> span, a, em
+ 전 후 줄바꿈 없이 한 줄에 나란히 배치
+ inline 에서는 width 와 height를 지정해도 무시,
+ margin 과 padding 속성은 좌우간격만 반영 */
+
+ /* display : block -> div, p, h1
+ 전 후 줄바꿈이 들어가서 다른요소를 다른 줄로 밀어내 한 줄을 차지
+ block 에서는 width, height, margin, padding 속성 모두 반영 */
+
+ /* display : inline-block -> button, input, select
+ inline-block 에서는 inline처럼 줄바꿈 없이 한 줄에 나란히 배치되지만
+ block 처럼 width, height, margin, padding 속성 지정 가능 */
+
+ 

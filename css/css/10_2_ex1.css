@@ -2,24 +2,35 @@
 	color: green;
 }
 /* [속성명] : 특정 속성이 있는 요소 선택 */
+
 [target=daum] {
 	color: blue;
 }
-/* [속성명=속성값] :  */
+/* [속성명=속성값] : 속성 값과 일치하는 요소 선택  */
+
 /* [class*=att_class] {
 	color: red;
 } */
 /* 일부가 일치하게 하는것 * */
+
 [class~=att_class] {
 	color: yellow;
-}
+} 
+/* [속성명~=속성값] : 설정한 속성 값이 포함되어 있는 요소 선택 */
+
 [class|=att] {
 	color: darksalmon;
 }
+/* [속성명|=속성값] : 속성값이 완전일치 또는 '속성값' + '-' 인 요소 */
+
 [class^=co] {
 	color: palevioletred;
 }
+/* [속성명^=속성값] : 특정 속성값으로 시작하는 요소 선택 */
+
 [class$=k1] {
 	color: lime;
 }
+/* [속성명$=속성값] : 특정 속성값으로 끝나는 요소 선택 */
+
 /* 속성명 주는 이것은 별로 중요하지 않음 굳이? */
