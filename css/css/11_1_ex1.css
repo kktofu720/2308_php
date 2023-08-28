@@ -1,0 +1,21 @@
+.container {
+	display: flex;
+}
+/* display: flex 세로로 배치 */
+.ball {
+	margin: 5px;
+	width: 50px;
+	height: 50px;
+	background-color: cadetblue;
+	border-radius: 50%;
+	animation: moveUpDown 1s ease-in-out infinite alternate;
+}
+/* 카멜기법 */
+@keyframes moveUpDown {
+	from{
+		transform: translateY(0)
+	}
+	to {
+		transform: translateY(100px);
+	}
+}

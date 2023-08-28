@@ -1,0 +1,56 @@
+fieldset {
+	width: 450px;
+	height: 350px;
+	background-image: url(../img/cat2.jpg);
+	background-repeat: no-repeat;
+
+	background-size: 480px 380px;
+	margin: 50px auto;
+}
+legend {
+	color: deeppink;
+	font-size :30px;
+	font-weight: 900;
+}
+span {
+	color: red;
+}
+.gen {
+	color: black;
+}
+#memo, #id, #age {
+	background: none;
+}
+input {
+	margin: 10px;
+}
+input[type="text"]:focus, input[type="number"]:focus {
+	border: 3px solid red;
+	outline: none;
+}
+input:checked + label {
+	color: red;
+}
+#memo:focus {
+	outline: none;
+	border: 3px solid red;
+}
+.memo-1 {
+	/* float: left; */
+	vertical-align: top;
+}
+/* 둘 중에 하나해도 가능 */
+#butt {
+	position: relative;
+}
+#butt:hover::after {
+	content: '내용을 다시 한 번 확인해 주세요.';
+	position: absolute;
+	background-color: black;
+	color: white;
+	font-size: 15px;
+	left: 60px;
+	top: 0px;
+	width: 250px;
+}
+

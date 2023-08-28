@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./10_99_tng2.css">
+	<title>Document</title>
+</head>
+<body>
+	<fieldset>
+		<legend>I want YOU!</legend>
+		<form action="">
+			<label for="id"><span>*</span>이름</label>
+			<input type="text" name="id" id="id" required>
+			<br>
+			<label for="age"><span>*</span>나이</label>
+			<input type="number" name="age" id="age" min="20" required>
+			<br>
+			<span>*</span><label for=""><span class="gen">성별</span></label>
+			<input type="radio" id="male" name="gender" required>
+			<label for="male">남자</label>
+			<input type="radio" id="female" name="gender" required>
+			<label for="female">여자</label>
+			<br>
+			<label class="memo-1" for="memo">요청사항</label>
+			<textarea name="memo" id="memo" cols="25" rows="10" placeholder="요청 사항 입력"></textarea>
+			<br>
+			<button id="butt" type="submit">보내기</button>
+			
+
+		</form>
+	</fieldset>
+</body>
+</html>

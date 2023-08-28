@@ -8,6 +8,7 @@
 	background-color: antiquewhite;
 	box-sizing: border-box;
 }
+/* content-padding-border 영역까지 150px */
 .div-2 {
 	width: 150px;
 	height: 150px;
@@ -15,7 +16,10 @@
 	padding: 20px;
 	margin: 10px;
 	background-color: antiquewhite;
+	box-sizing: content-box;
 }
+/* content까지 150px */
+
 /* content-box가 디폴트값 */
 .div-3 {
 	width: 150px;

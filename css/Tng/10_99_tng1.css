@@ -24,6 +24,7 @@ nav {
 	text-align: center;
 	box-sizing: border-box;
 }
+/* text-align 글자 중앙, line-height 글자선중앙 */
 a { 
 	color: #000;
 	text-decoration-line: none;
