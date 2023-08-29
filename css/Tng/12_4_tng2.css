@@ -1,0 +1,34 @@
+.container {
+	width: 500px;
+	height: 500px;
+	background-color: gray;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 10px;
+	justify-content: space-between;
+	align-content: space-between;
+	
+}
+.item {
+	width: 49%;
+	height: 32%;
+	border: 1px solid #000;
+	box-sizing: border-box;
+	background-color: aquamarine;
+	
+}
+.item-box {
+	background-color: transparent;
+	border: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	
+}
+.row-1 {
+	width: 100%;
+}
+.col-2 {
+	height: 47%;
+}
+

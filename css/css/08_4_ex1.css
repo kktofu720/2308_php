@@ -32,10 +32,13 @@ div {
 
  /* display : block -> div, p, h1
  전 후 줄바꿈이 들어가서 다른요소를 다른 줄로 밀어내 한 줄을 차지
- block 에서는 width, height, margin, padding 속성 모두 반영 */
+ block 에서는 width, height, margin, padding 속성 모두 반영 
+ 부모요소의 영역 모두 차지
+ block일 때 나란히 세우고싶으면 float:left 사용*/
 
  /* display : inline-block -> button, input, select
  inline-block 에서는 inline처럼 줄바꿈 없이 한 줄에 나란히 배치되지만
- block 처럼 width, height, margin, padding 속성 지정 가능 */
+ block 처럼 width, height, margin, padding 속성 지정 가능
+ 표시한 컨텐츠영역 만큼만 차지 */
 
  

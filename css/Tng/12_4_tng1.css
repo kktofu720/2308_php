@@ -1,0 +1,26 @@
+.container {
+	background-color: gray;
+	margin: 10px;
+	width: 100vw;
+	height: 60vh;
+	
+	/* flex-flow: row wrap; */
+	
+}
+
+
+.item {
+	width: 150px;
+	height: 15vh;
+	background-color: skyblue;
+	border: 1px solid #000;
+	float: left;
+	
+	box-sizing: border-box;
+}
+.item2 {
+	/* background: none;
+	border: none; */
+	opacity: 0;
+	
+}

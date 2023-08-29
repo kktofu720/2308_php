@@ -2,14 +2,14 @@
 .container {
 	background-color: gray;
 	margin: 10px;
-	width: 60vw;
+	width: 100vw;
 	height: 60vh;
 	display: flex;
 	/* flex-direction: row;
 	flex-wrap: wrap; */
 	flex-flow: row wrap;
 	/* justify-content: space-between; */
-	align-items: baseline;
+	/* align-items: baseline; */
 }
 /* flex는 자식요소에 주면 x 부모요소에 o */
 /* flex-direction:row row 가 디폴트값
@@ -17,8 +17,13 @@ row : 행 가로 col: 열 세로
 flex-wrap:nowrap이 디폴트 */
 
 .item {
-	width: 15vw;
+	width: 150px;
 	height: 15vh;
 	background-color: skyblue;
 	border: 1px solid #000;
+	box-sizing: border-box;
+}
+.item2 {
+	font-size: 30px;
+	align-self: flex-end;
 }
