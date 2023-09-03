@@ -1,7 +1,16 @@
+-- 0. SELECT 문의 기본 구조
+-- 		SELECT [DISTINCT] [컬럼명]
+-- 		FROM [테이블명]
+-- 		WHERE [쿼리 조건]
+-- 		GROUP BY [컬럼명] HAVING [집계함수 조건]
+--  	ORDER BY [컬럼명 ASC || 컬럼명 DESC]
+-- 		;
+
 -- SELECT [컬럼명] FROM [테이블명];
 SELECT * FROM employees;
 SELECT * FROM dept_emp;
 
+--  컬럼명으로 조회
 SELECT first_name, last_name FROM employees;
 SELECT emp_no, title FROM titles;
 
@@ -11,7 +20,7 @@ SELECT * FROM employees WHERE emp_no = 10009;
 SELECT * FROM employees WHERE first_name = 'Mary';
 SELECT * FROM employees WHERE birth_date >= 19700101;
 
--- and 연산자 
+-- and,	or 연산자 
 SELECT *
 FROM employees 
 WHERE birth_date <= 19700101 
@@ -27,7 +36,7 @@ FROM employees
 WHERE first_name = 'Mary'
    OR last_name = 'piazza';   
 
---  
+-- BETWEEN [A] AND [B]로 해당 범위 내의 데이터 조회
 SELECT *
 FROM employees
 WHERE emp_no >= 10005 
@@ -40,19 +49,28 @@ WHERE emp_no BETWEEN 10005 AND 10010;
 SELECT *
 FROM employees
 WHERE emp_no = 10005 OR emp_no = 10010;
-WHERE emp_no IN(10005, 10010);
 
---
--- 이름이 'Ge'로 시작하는 사람
+-- IN()으로 해당 데이터 조회
 SELECT *
 FROM employees
-WHERE first_name LIKE('%Ge');     
+WHERE emp_no IN(10005, 10010);
+
+-- LIKE로 문자열의 내용을 조회
+-- > "%"는 무엇이든 허용한다는 의미
+
+-- 이름이 'Ge'로  끝나는 사람
+SELECT *
+FROM employees
+WHERE first_name LIKE('%Ge');  
+-- 이름이 'Ge'로 시작하는 사람   
 SELECT *
 FROM employees
 WHERE first_name LIKE('Ge%');
+-- 이름이 'Ge'가 중간에 포함된 사람
 SELECT *
 FROM employees
 WHERE first_name LIKE('%Ge%');
+
 -- titles 테이블에서 title 에 'staff'가 포함되어 있는 사람을 검색해주세요.
 SELECT *
 FROM titles
@@ -84,8 +102,8 @@ SELECT DISTINCT emp_no, salary FROM salaries WHERE emp_no = 10001;
 
 -- 5. 집계 함수
 SELECT SUM(salary) FROM salaries;
+
 -- 현재 받고있는 급여만 조회해주세요.
-SELECT * FROM salaries WHERE to_date = 99990101;
 SELECT * FROM salaries WHERE to_date >= 20230901;
 -- SUM (컬럼명) : 합계를 구함
 SELECT SUM(salary) FROM salaries WHERE to_date >= 20230901;
@@ -110,7 +128,7 @@ GROUP BY title; HAVING title = 'staff';
 SELECT title, COUNT(title)
 FROM titles
 WHERE to_date >= 20230901
-GROUP BY title;
+GROUP BY title HAVING title LIKE('%staff%');
 
 -- 속성명에 "AS"를 이용하여 별칭을 줄 수 있습니다.
 SELECT title, COUNT(title) AS cnt
