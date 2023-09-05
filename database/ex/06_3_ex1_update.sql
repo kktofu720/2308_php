@@ -25,16 +25,23 @@ SELECT * FROM salaries WHERE emp_no = 500000;
 
 -- 500000번 사원의 직급을 'Technique Leader', 연봉을 '20000' 수정해주세요.
 UPDATE titles
-SET title = 'Technique Leader'
+SET title = 'Staff'
 WHERE emp_no = 500000;
 
 SELECT * FROM titles WHERE emp_no = 500000;
-COMMIT;
+
 
 UPDATE salaries
 SET salary = 20000
 WHERE emp_no = 500000;
 
 SELECT * FROM salaries WHERE emp_no = 500000;
-COMMIT;
+
+
+UPDATE titles
+SET to_date = NULL
+WHERE emp_no = 500000;
+
+SELECT * FROM titles ORDER BY emp_no DESC;
+
 
