@@ -12,13 +12,13 @@ echo $arr[1];
 
 // 키는 요리명, 값은 주재료 하나로 이루어진 배열을 만들어 주세요. (배열 길이는 4)
 
-$arr1 = [
-	"kimbap" => "김"
-	, "zzol" => "면"
-	, "bibim" => "밥"
-	, "ddeuk" => "떡"
-];
-var_dump($arr1);
-echo $arr1["zzol"];
+// $arr1 = [
+// 	"kimbap" => "김"
+// 	, "zzol" => "면"
+// 	, "bibim" => "밥"
+// 	, "ddeuk" => "떡"
+// ];
+// var_dump($arr1);
+// echo $arr1["zzol"];
 
 ?>
