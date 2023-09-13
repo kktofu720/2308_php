@@ -55,5 +55,8 @@ my_args_param("a", "b", "c");
 // 	print_r($items);
 // }
 
+return array_sum($arr);
+echo my_test($str);
+
 
 ?>

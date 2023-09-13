@@ -20,15 +20,15 @@
 // echo $arr4["name"]
 
 // 다차원 배열
-// $arr5 = [
-// 	[11, 12, 13]
-// 	, [
-// 		[211, 212, 213]
-// 		, [221, 222, 223]
-// 	]
-// 	, [31, 32, 33]
-// ];
-// echo $arr5[[1][0][1]];
+$arr5 = [
+	[11, 12, 13]
+	, [
+		[211, 212, 213]
+		, [221, 222, 223]
+	]
+	, [31, 32, 33]
+];
+echo $arr5[[1][0][1]];
 
 // $arr6 = [
 // 	"msg" => "OK"
@@ -75,20 +75,20 @@
 // echo count($arr_ksort);
 
 // array_diff() : A배열과  B배열을 비교해서 중복되지 않는 A배열의 원소를 반환
-$arr_diff1 = [ 1, 2, 3 ];
-$arr_diff2 = [ 1, 4, 5 ];
-$arr_diff = array_diff($arr_diff2, $arr_diff1);
-print_r($arr_diff);
+// $arr_diff1 = [ 1, 2, 3 ];
+// $arr_diff2 = [ 1, 4, 5 ];
+// $arr_diff = array_diff($arr_diff2, $arr_diff1);
+// print_r($arr_diff);
 
 // array_push() : 기존 배열에 값을 추가하는 함수
 // $arr_push = [ 1, 2, 3];
 // array_push($arr_push, 4, 5);
 // print_r($arr_push);
 
-$arr_push2 = [
-	"a" => 1
-	, "b" => 2
-];
-$arr_push2["c"] = 3;
-print_r($arr_push2)
+// $arr_push2 = [
+// 	"a" => 1
+// 	, "b" => 2
+// ];
+// $arr_push2["c"] = 3;
+// print_r($arr_push2)
 ?>
