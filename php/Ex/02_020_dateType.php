@@ -1,4 +1,5 @@
 <?php
+// **데이터타입 : int string array double boolean 5가지 알고있기
 // int : 숫자
 $num = 1;
 
