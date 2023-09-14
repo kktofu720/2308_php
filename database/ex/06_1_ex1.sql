@@ -170,7 +170,7 @@ FROM employees
 WHERE emp_no = (
 	SELECT emp_no 
 	FROM dept_manager
- 	WHERE to_date >= 20230901 
+ 	WHERE to_date >= 20230901
      AND dept_no = 'd002'
 );
 

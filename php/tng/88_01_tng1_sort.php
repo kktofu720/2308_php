@@ -11,22 +11,22 @@
 // }
 // echo count($arr);
 
-$arr = [5, 34, 3, 2, 6, 7, 12];
-$len = count($arr);
+// $arr = [5, 34, 3, 2, 6, 7, 12];
+// $len = count($arr);
 
-for ($i = 0; $i < $len; $i++) {
+// for ($i = 0; $i < $len; $i++) {
 	
-	for ($j = 0; $j < $len - 1 - $i; $j++) {
+// 	for ($j = 0; $j < $len - 1 - $i; $j++) {
 	
-		if ($arr[$j] > $arr[$j + 1]) {
+// 		if ($arr[$j] > $arr[$j + 1]) {
 			
-			$tmp = $arr[$j];
-			$arr[$j] = $arr[$j + 1];
-			$arr[$j + 1] = $tmp;
-		}
-	}
-}
-print_r($arr);
+// 			$tmp = $arr[$j];
+// 			$arr[$j] = $arr[$j + 1];
+// 			$arr[$j + 1] = $tmp;
+// 		}
+// 	}
+// }
+// print_r($arr);
 
 
 // $tmp  = $arr[1];
@@ -50,6 +50,18 @@ print_r($arr);
 
 // print_r($arr2);
 
+$arr = [5, 34, 3, 2, 6, 7, 12];
+$len = count($arr); // 7
 
-
+for($i=0; $i<=$len; $i++) {
+	for($j=0; $j<$len - 1 -$i; $j++) {
+		if($arr[$j]>$arr[$j+1]) {
+			$tmp = $arr[$j];
+			$arr[$j] = $arr[$j+1];
+			$arr[$j+1] = $tmp;
+		}
+	}
+}
+print_r($arr); // print_r은 배열에서 [0] => 2 값만 출력
+// var_dump($arr); // var_dump는 배열에서 [0] => int(2) 이런식으로 출력
 ?>
