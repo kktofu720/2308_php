@@ -21,56 +21,83 @@
 // }
 // echo "컴퓨터 : {$choice}";
 
-// if($choice === $player) {
-// 	echo "무승부";
-// }
-// else if($choice = "가위" && $player = "바위") {
-// 	echo "승리";
-// }
-// else if($choice = "가위" && $player = "보") {
-// 	echo "패배";
-// }
-// else if($choice = "바위" && $player = "가위") {
-// 	echo "패배";
-// }
-// else if($choice = "바위" && $player = "보") {
-// 	echo "승리";
-// }
-// else if($choice = "보" && $player = "가위") {
-// 	echo "승리";
-// }
-// else($choice = "보" && $player = "바위") {
-// 	echo "패배";
-// }
-
-$in_str = trim(fgets(STDIN));
-$rannum = rand(0, 2);
-$rsp = ["가위", "바위", "보"];
-$computer = $choice;
-$user = 0;
+// $in_str = trim(fgets(STDIN));
+// $rannum = rand(0, 2);
+// $rsp = ["가위", "바위", "보"];
+// $computer = $choice;
+// $user = 0;
 
     
-if ($choice) {
-	$user = "$choice";
-	$computer = $rsp[rand($rsp)];
+// if ($choice) {
+// 	$user = "$choice";
+// 	$computer = $rsp[rand($rsp)];
 	
-	echo "나 : $user";
-	echo "컴퓨터 : $computer";
+// 	echo "user : $user";
+// 	echo "컴퓨터 : $computer";
 	
-	if ($user == $computer) {
-		echo "무승부";
-	} elseif (
-		($user == 0 && $computer == 2) ||
-		($user == 1 && $computer == 0) ||
-		($user == 2 && $computer == 1)
-	) {
-		echo "승리";
-	} else {
-		echo "패배";
+// 	if ($user == $computer) {
+// 		echo "무승부";
+// 	} elseif (
+// 		($user == 0 && $computer == 2) ||
+// 		($user == 1 && $computer == 0) ||
+// 		($user == 2 && $computer == 1)
+// 	) {
+// 		echo "승리";
+// 	} else {
+// 		echo "패배";
+// 	}
+// }
+
+//0 가위 1 바위 2 보 
+//0 이김 1 짐 2비김
+
+echo "\n";
+echo "******** 가위바위보 게임을 시작합니다 ********\n";
+echo "*** 가위는 s 바위는 r 보는 p를 입력하세요 ***";
+
+while(true){
+
+$rsp = ["가위", "바위", "보"];
+$user = trim(fgets(STDIN));
+$rsp2 = ["s"=>"가위","r"=>"바위","p"=>"보"];
+	if($user=="e"){
+		break;
+	}
+
+$computer=rand(0,2);
+if($user == "s"){
+	if($computer == 0){
+		$result="무승부";
+	}
+	if($computer == 1){
+		$result="패배";
+	}
+	if($computer == 2){
+		$result= "승리";
 	}
 }
-php 88_02_tng2_rsp.php
+if($user == "r"){
+	if($computer == 0){
+		$result= "승리";
+	}
+	if($computer == 1){
+		$result= "무승부";
+	}
+	if($computer == 2){
+		$result= "패배";
+	}
+}
+if($user == "p"){
+	if($computer == 0){
+		$result= "패배";
+	}
+	if($computer == 1){
+		$result= "승리";	
+	}
+	if($computer == 2){
+		$result= "무승부";
+	}
+}
 
-
-
-?>
+echo "\n나 : $rsp2[$user]\n", "컴퓨터 : $rsp[$computer]\n", "결과 : $result\n";
+}
