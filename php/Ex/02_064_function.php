@@ -59,4 +59,36 @@ return array_sum($arr);
 echo my_test($str);
 
 
+
+ // 레퍼런스 파라미터
+
+//  function test1( $str ) { // <- 여기 $str 과
+// 	$str = "함수 test1";
+// 	return $str;
+//  }
+
+//  $str = "???";            // <- 여기 $str 은 다름
+//  $result = test1( $str );
+//  echo $str, "\n";
+//  echo $result;
+
+function test2( &$st ) { // <- &붙으면 여기 $st과  
+	$st = "함수 test2";
+	return $st;
+ }
+
+ $str = "???";            // <- 여기 $str과 같음
+ $result = test2( $str );
+ echo $str, "\n";
+ echo $result;
+
+// test1( $str );  
+
+// echo $str;
+
+
+
+
+
+
 ?>

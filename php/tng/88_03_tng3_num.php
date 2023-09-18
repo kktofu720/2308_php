@@ -13,38 +13,12 @@
 // $입력
 // $정답
 // for문 사용
-// $user = trim(fgets(STDIN)); //나
-// $rannum = rand(1, 100); // 컴
-//$num // 기회
+// $user = trim(fgets(STDIN)); // 나
+$rannum = rand(1, 100); // 컴
+// $num // 기회
 
-// for($num=1; $num<=5; $num++) {
-// 	echo $rannum; // 미리 답 알기
-// 	$user = trim(fgets(STDIN));
-
-// 	if($user > $rannum) {
-// 		echo "더 큼\n";
-// 	} // 3번
-// 	else if($user < $rannum) {
-// 		echo "더 작음\n";
-// 	} // 4번
-// 	else if($user == $rannum) {
-// 		echo "정답\n";
-// 		break; // 5번
-// 	}
-// 	if($num == 5) {
-// 		echo "정답 : {$rannum}"."실패";
-// 		break;
-// 	}
-// }
-
-// while 문 사용하기
-// $user = trim(fgets(STDIN));
-// $rannum = rand(1, 100);
-$rannum = rand(1, 100);
-$num = 1;
-
-while($num <= 5) {
-	
+for($num=1; $num<=5; $num++) {
+	echo $rannum; // 미리 답 알기
 	$user = trim(fgets(STDIN));
 
 	if($user > $rannum) {
@@ -61,8 +35,33 @@ while($num <= 5) {
 		echo "정답 : {$rannum}"."실패";
 		break;
 	}
-	$num++;
 }
+
+// while 문 사용하기
+// $user = trim(fgets(STDIN));
+// $rannum = rand(1, 100);
+// $num = 1;
+
+// while($num <= 5) {
+	
+// 	$user = trim(fgets(STDIN));
+
+// 	if($user > $rannum) {
+// 		echo "더 큼\n";
+// 	} // 3번
+// 	else if($user < $rannum) {
+// 		echo "더 작음\n";
+// 	} // 4번
+// 	else if($user == $rannum) {
+// 		echo "정답\n";
+// 		break; // 5번
+// 	}
+// 	if($num == 5) {
+// 		echo "정답 : {$rannum}"."실패";
+// 		break;
+// 	}
+// 	$num++;
+// }
 	
 
 

@@ -57,14 +57,14 @@ echo "*** 가위는 s 바위는 r 보는 p를 입력하세요 ***";
 
 while(true){
 
-$rsp = ["가위", "바위", "보"];
-$user = trim(fgets(STDIN));
-$rsp2 = ["s"=>"가위","r"=>"바위","p"=>"보"];
+$rsp = ["가위", "바위", "보"]; // 나
+$user = trim(fgets(STDIN)); // 나
+$rsp2 = ["s"=>"가위","r"=>"바위","p"=>"보"]; // 컴
 	if($user=="e"){
 		break;
 	}
 
-$computer=rand(0,2);
+$computer=rand(0,2); // 컴
 if($user == "s"){
 	if($computer == 0){
 		$result="무승부";
