@@ -28,6 +28,6 @@ print_r($result);
 $conn = null;
 
 //db 파기
-db_destroy_conn($conn)
+db_destroy_conn($conn);
 
 ?>

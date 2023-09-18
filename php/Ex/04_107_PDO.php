@@ -94,7 +94,7 @@ $arr_ps = [
 
 $stmt = $obj_conn->prepare($sql);
 $result = $stmt->execute($arr_ps);
-$obj_conn->commit(); // 커밋
+// $obj_conn->commit(); // 커밋
 
 var_dump($result);
 $obj_conn = null; // DB 파기
@@ -123,8 +123,8 @@ $obj_conn = null; // DB 파기
 // 	echo "commit";
 // }
 
-// // $obj_conn->commit(); // 커밋
 // $obj_conn = null; // DB 파기
+
 // var_dump($result);
 
 
