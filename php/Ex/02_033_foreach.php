@@ -18,9 +18,9 @@ foreach($arr2 as $key => $val) {
 } //$key는 index 0,1,2 $val은 나오는 값 1, 2, 3
 
 //키가 필요없을 때
-foreach($arr2 as $val) {
-	echo "{$val}\n";
-}
+// foreach($arr2 as $val) {
+// 	echo "{$val}\n";
+// }
 
 
 

@@ -20,10 +20,10 @@ $arr = [
 	]
 ];
 
-echo "ID List\n";
-foreach($arr as $val) {
-	echo $val["id"]."\n";
-}
+// echo "ID List\n";
+// foreach($arr as $val) {
+// 	echo $val["id"]."\n";
+// }
 
 echo "ID List\n";
 foreach($arr as $key => $val) {
