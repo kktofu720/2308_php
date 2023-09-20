@@ -1,5 +1,19 @@
 <?php
 
+// ********************************
+// 파일명 	: 04_107_fnc_db_connect.php
+// 기능		: DB 연동 관련 함수
+// 버전		: v001 new Park.bj 230918
+//			  v002 dbconn 설정 변경 Kim.mj 230919
+// ********************************
+
+// ---------------------------------
+// 함수명   : my_db_conn
+// 기능     : DB Connect
+// 파라미터 : PDO   &$conn
+// 리턴     : boolen
+// ---------------------------------
+
 function my_db_conn( &$conn ) {
 	$db_host    = "localhost"; 
 	$db_user    = "root"; 
@@ -23,6 +37,13 @@ function my_db_conn( &$conn ) {
 		return false;
 	}
 }
+
+// ---------------------------------
+// 함수명   : db_destroy_conn
+// 기능     : DB Destroy
+// 파라미터 : PDO   &$conn
+// 리턴     : 없음
+// ---------------------------------
 
 function db_destroy_conn(&$conn) {
 	$conn = null;

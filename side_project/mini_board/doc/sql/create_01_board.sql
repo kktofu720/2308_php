@@ -1,6 +1,6 @@
 CREATE DATABASE mini_board;
 
-USE mini_board;
+-- USE mini_board;
 
 CREATE TABLE boards(
 	id INT PRIMARY KEY AUTO_INCREMENT 
@@ -10,3 +10,7 @@ CREATE TABLE boards(
 	,delete_flg CHAR(1) NOT NULL DEFAULT '0'
 	,delete_at DATETIME DEFAULT NULL
 );
+
+SELECT 
+
+COMMIT;
