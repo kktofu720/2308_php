@@ -1,17 +1,25 @@
+@font-face {
+    font-family: 'ImcreSoojin';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/ImcreSoojin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
 	box-sizing: border-box;
+	font-family: 'ImcreSoojin';
 }
 body {
 	margin: 0;
 	padding: 0;
-	background-image: url(../../doc/cat2.jpg);
+	background-image: url(/mini_board/doc/cat3.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: 0 140px ;
+	background-position: 0 149px ;
 }
 header {
 	width: 100%;
-	background-color: #f8892f;
+	background-color: rgba(248, 137, 47, 0.8);
 	padding: 2rem;
 }
 header>h1 {
@@ -19,6 +27,9 @@ header>h1 {
 	color: #ffffff;
 	text-align: center;
 	font-size: 4rem;
+}
+header>h1>a {
+	color: #ffffff;
 }
 table {
 	border-collapse: collapse;
@@ -28,7 +39,8 @@ table {
 	font-size: 1.5rem;
 }
 td {
-	border-bottom: 1px solid #000;
+	border-bottom: 1px solid #424743;
+	color: #103a18;
 	text-align: center;
 }
 .table-title {
@@ -42,10 +54,14 @@ section {
 a {
 	text-decoration: none;
 	display: inline-block;
-	width: 50px;
-	height: 50px;
+	
+}
+.page-btn {
+	width: 40px;
+	height: 40px;
 	text-align: center;
-	line-height: 50px;
-	background-color: #103612;
+	line-height: 40px;
+	background-color: rgba(86, 153, 31, 0.7);
+	border-radius: 30%;
 	color: #ffffff;
 }
