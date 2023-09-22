@@ -12,7 +12,7 @@ try {
 	if(!isset($_GET["id"]) || $_GET["id"] === "") {
 		throw new Exception("Parameter ERROR : No Id"); // 강제 예외 발생 : Parameter ERROR
 	}
-
+	//
 	$id = $_GET["id"]; // id 셋팅
 	$page = $_GET["page"];
 
