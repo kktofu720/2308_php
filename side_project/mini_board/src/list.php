@@ -89,7 +89,7 @@ try {
 	 	require_once(FILE_HEADER);
 	 ?>
 	<main>
-		<a href="/mini_board/src/insert.php">글 작성</a>
+		<a class="a-po" href="/mini_board/src/insert.php">글 작성</a>
 		<table>
 			<colgroup>
 				<col width="20%">

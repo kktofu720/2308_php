@@ -45,6 +45,7 @@ header>h1>a {
 	bottom: 30%;
 	right: 30%; */
 	color: #ffffff;
+	float: right;
 }
 table {
 	border-collapse: collapse;
