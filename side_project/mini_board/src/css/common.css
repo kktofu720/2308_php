@@ -1,13 +1,13 @@
 @font-face {
-    font-family: 'ImcreSoojin';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/ImcreSoojin.woff') format('woff');
+    font-family: 'BMJUA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 * {
 	box-sizing: border-box;
-	font-family: 'ImcreSoojin';
+	font-family: 'BMJUA';
 }
 body {
 	margin: 0;
@@ -15,7 +15,7 @@ body {
 	background-image: url(/mini_board/doc/cat3.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: 0 149px ;
+	background-position: 0 153px ;
 }
 header {
 	width: 100%;
@@ -31,18 +31,35 @@ header>h1 {
 header>h1>a {
 	color: #ffffff;
 }
+/* .table-po {
+	position: relative;
+} */
+.a-po {
+	width: 70px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	/* border: 1px solid rgb(86, 153, 31); */
+	background-color: rgba(86, 153, 31, 0.5);
+	/* position: absolute;
+	bottom: 30%;
+	right: 30%; */
+	color: #ffffff;
+}
 table {
 	border-collapse: collapse;
 	width: 700px;
 	height: 500px;
-	margin: 50px auto;
+	margin: 65px auto;
 	font-size: 1.5rem;
 }
+
 td {
 	border-bottom: 1px solid #424743;
 	color: #103a18;
 	text-align: center;
 }
+
 .table-title {
 	border: none;
 	background-color: rgba(86, 153, 31, 0.5);
