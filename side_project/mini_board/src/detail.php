@@ -62,26 +62,30 @@ $input_id = $_GET["id"];
 	<?php
 		require_once(FILE_HEADER);
 	?>
-	<table>
-		<tr>
-			<th>글 번호</th>
-			<td><?php echo $item["id"]; ?></td>
-		</tr>
-		<tr>
-			<th>제목</th>
-			<td><?php echo $item["title"]; ?></td>
-		</tr>
-		<tr>
-			<th>내용</th>
-			<td><?php echo $item["content"]; ?></td>
-		</tr>
-		<tr>
-			<th>작성일자</th>
-			<td><?php echo $item["create_at"]; ?></td>
-		</tr>
-	</table>
-	<a href="#">수정</a>
-	<a href="/mini_board/src/list.php/?page=<?php echo $page; ?>">취소</a>
-	<a href="#">삭제</a>
+	<div>
+		<table class="detail-container">
+			<tr>
+				<th>글 번호</th>
+				<td><?php echo $item["id"]; ?></td>
+			</tr>
+			<tr>
+				<th>제목</th>
+				<td><?php echo $item["title"]; ?></td>
+			</tr>
+			<tr>
+				<th>내용</th>
+				<td><?php echo $item["content"]; ?></td>
+			</tr>
+			<tr class="detail-tr4">
+				<th class="detail-tr4">작성일자</th>
+				<td class="detail-tr4"><?php echo $item["create_at"]; ?></td>
+			</tr>
+		</table>
+	</div>
+	<div class="detail-a">
+		<a class="insert-butt" href="#">수정</a>
+		<a class="insert-butt" href="/mini_board/src/list.php/?page=<?php echo $page; ?>">취소</a>
+		<a class="insert-butt" href="#">삭제</a>
+	</div>
 </body>
 </html>

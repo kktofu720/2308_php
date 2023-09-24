@@ -89,7 +89,6 @@ try {
 	 	require_once(FILE_HEADER);
 	 ?>
 	<main>
-		<a class="a-po" href="/mini_board/src/insert.php">글 작성</a>
 		<table>
 			<colgroup>
 				<col width="20%">
@@ -105,27 +104,38 @@ try {
 				// 리스트를 생성
 				foreach($result as $item) {
 			?>	
-					<tr>
-						<td><?php echo $item["id"]?></td>
-						<td>
-							<a href="/mini_board/src/detail.php/?id=<?php echo $item["id"]; ?>&page=<?php echo $page_num; ?>">
-								<?php echo $item["title"]?>
-							</a>
-						</td>
-						<td><?php echo $item["create_at"]?></td>
-					</tr>	
+				<tr>
+					<td><?php echo $item["id"]?></td>
+					<td>
+						<a href="/mini_board/src/detail.php/?id=<?php echo $item["id"]; ?>&page=<?php echo $page_num; ?>">
+							<?php echo $item["title"]?>
+						</a>
+					</td>
+					<td><?php echo $item["create_at"]?></td>
+				</tr>	
 			<?php	} ?>
-
 		</table>
+		<div class="main-div">
+			<a class="main-div-a" href="/mini_board/src/insert.php">글 작성</a>
+		</div>
 		<section>
 			<a class="page-btn" href="/mini_board/src/list.php/?page=<?php echo $prev_page_num ?>">◀</a>
 			<?php
 				for($i = 1; $i <= $max_page_num; $i++) {
-			?>		
+					// 현재 페이지에 hover
+					if((int)$page_num === $i) {
+					?>
+					<a class="act-btn" href="/mini_board/src/list.php/?page=<?php echo $i; ?>"><?php echo $i; ?></a>
+					<?php
+					} else {
+					?>
 					<a class="page-btn" href="/mini_board/src/list.php/?page=<?php echo $i; ?>"><?php echo $i; ?></a>
-			<?php		
+					<?php
+					}
 				}
-			?>
+				?>		
+				
+				
 			<a class="page-btn" href="/mini_board/src/list.php/?page=<?php echo $next_page_num ?>">▶</a>
 		</section>
 	</main>

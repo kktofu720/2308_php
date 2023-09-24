@@ -12,7 +12,7 @@
 body {
 	margin: 0;
 	padding: 0;
-	background-image: url(/mini_board/doc/cat3.jpg);
+	background-image: url(/mini_board/doc/cat5.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 0 153px ;
@@ -31,31 +31,43 @@ header>h1 {
 header>h1>a {
 	color: #ffffff;
 }
-/* .table-po {
+
+main {
+	width: 900px;
+	height: 600px;
+	margin: 50px auto;
 	position: relative;
-} */
-.a-po {
+}
+.main-div {
+	width: 800px;
+	margin: auto;
+}
+.main-div-a {
+	position: absolute;
+	bottom: 70px;
+	right: 50px;
 	width: 70px;
 	height: 30px;
-	text-align: center;
 	line-height: 30px;
-	/* border: 1px solid rgb(86, 153, 31); */
-	background-color: rgba(86, 153, 31, 0.5);
-	/* position: absolute;
-	bottom: 30%;
-	right: 30%; */
+	text-align: center;
+	background-color: rgba(86, 153, 31, 0.7);
+	/* border-radius: 30%; */
 	color: #ffffff;
-	float: right;
 }
-table {
-	border-collapse: collapse;
-	width: 700px;
-	height: 500px;
-	margin: 65px auto;
-	font-size: 1.5rem;
+.main-div-a:hover {
+	color: #103a18;
 }
 
-td {
+
+table {
+	border-collapse: collapse;
+	width: 800px;
+	height: 480px;
+	margin: 30px auto;
+	font-size: 1.4rem;
+}
+
+tr, td {
 	border-bottom: 1px solid #424743;
 	color: #103a18;
 	text-align: center;
@@ -72,7 +84,7 @@ section {
 a {
 	text-decoration: none;
 	display: inline-block;
-	
+	color: #103a18;
 }
 .page-btn {
 	width: 40px;
@@ -82,4 +94,93 @@ a {
 	background-color: rgba(86, 153, 31, 0.7);
 	border-radius: 30%;
 	color: #ffffff;
+}
+.act-btn {
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	background-color: #103a18;
+	border-radius: 30%;
+	color: #ffffff;
+}
+.page-btn:hover {
+	color: #103a18;
+}
+
+/*********** insert 페이지 ************/
+.insert-field {
+	border: none;
+	text-align: center;
+}
+.insert-container {
+	text-align: center;
+	margin: 40px auto 0 auto;
+	width: 800px;
+	vertical-align: middle;
+	border: none;
+	display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.insert-tit {
+	padding: 10px;
+	border: none;
+	min-width: 600px;
+	height: 80px;
+	outline: none;
+	border-radius: 20px;
+	font-size: 1.7rem;
+}
+.insert-cont {
+	padding: 10px;
+	border: none;
+	min-width: 600px;
+	height: 300px;
+	border-radius: 20px;
+	outline: none;
+	resize: none;
+	font-size: 1.3rem;
+}
+.insert-butt {
+	padding: 0;
+	width: 50px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	color: black;
+	background-color: #ffffff; 
+	border: none;
+	font-size: 1.1rem;
+}
+.insert-butt:hover {
+	background-color: rgba(86, 153, 31, 0.7);
+	color: #ffffff;
+}
+.insert-container>label {
+	width: 800px;
+	height: 50px;
+	padding: 10px;
+	background-color: rgba(86, 153, 31, 0.7);
+	border-radius: 20px;
+	color: #ffffff;
+	font-size: 2rem;
+}
+/*********** detail 페이지 ************/
+.detail-container {
+	width: 810px;
+	margin: 40px auto;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 20px;
+	border: 15px solid rgba(86, 153, 31, 0.7);
+}
+
+.detail-tr4 {
+	border : none;
+}
+.detail-a {
+	margin: 0;
+	text-align: center;
 }
