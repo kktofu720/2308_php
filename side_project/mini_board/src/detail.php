@@ -4,8 +4,9 @@ define("FILE_HEADER", ROOT."header.php"); // 헤어 패스
 require_once(ROOT."lib/lib_db.php"); // DB 관련 라이브러리
 
 $id = ""; // 게시글 id
-	$conn = null; // DB Connect
+$conn = null; // DB Connect
 // $page_num = $_GET["page"];
+
 try {
 
 	// id 확인
@@ -18,7 +19,7 @@ try {
 
 	// DB 연결
 	if(!my_db_conn($conn)) {
-		throw new Exception("DB ERROR : POD Instance");
+		throw new Exception("DB ERROR : PDO Instance");
 	}
 
 	// 게시글 데이터 조회
@@ -31,10 +32,10 @@ try {
 	// 게시글 조회 예외처리
 	if($result === false) {
 		// 게시글 조회 에러
-		throw new Exception("DB ERROR : POD Select_id");
+		throw new Exception("DB ERROR : PDO Select_id");
 	} else if(!(count($result) === 1)) {
 		// 게시글 조회 count 에러
-		throw new Exception("DB ERROR : POD Select_id count,".count($result));
+		throw new Exception("DB ERROR : PDO Select_id count,".count($result));
 	}
 	$item = $result[0];
 
@@ -83,7 +84,7 @@ $input_id = $_GET["id"];
 		</table>
 	</div>
 	<div class="detail-a">
-		<a class="insert-butt" href="#">수정</a>
+		<a class="insert-butt" href="/mini_board/src/update.php/?id=<?php echo $id; ?>&page=<?php echo $page; ?>">수정</a>
 		<a class="insert-butt" href="/mini_board/src/list.php/?page=<?php echo $page; ?>">취소</a>
 		<a class="insert-butt" href="#">삭제</a>
 	</div>

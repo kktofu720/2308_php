@@ -31,7 +31,10 @@ try {
 		$page_num = $_GET["page"]; // 유저가 보내온 페이지 셋팅
 	}
 	$offset = ($page_num -1) * $list_cnt; // 오프셋 계산
-	
+
+	// 삼항연산자로 작성할 경우
+	// $page_num = isset($_GET["page"]) ? $_GET["page"] : 1;
+
 	// 이전버튼
 	$prev_page_num = $page_num - 1;
 	if($prev_page_num === 0) {
@@ -119,7 +122,8 @@ try {
 			<a class="main-div-a" href="/mini_board/src/insert.php">글 작성</a>
 		</div>
 		<section>
-			<a class="page-btn" href="/mini_board/src/list.php/?page=<?php echo $prev_page_num ?>">◀</a>
+			<!-- 이전 페이지 -->
+			<a class="page-btn" href="/mini_board/src/list.php/?page=<?php echo $prev_page_num; ?>">◀</a>
 			<?php
 				for($i = 1; $i <= $max_page_num; $i++) {
 					// 현재 페이지에 hover
@@ -135,8 +139,8 @@ try {
 				}
 				?>		
 				
-				
-			<a class="page-btn" href="/mini_board/src/list.php/?page=<?php echo $next_page_num ?>">▶</a>
+				<!-- 다음 페이지  -->
+			<a class="page-btn" href="/mini_board/src/list.php/?page=<?php echo $next_page_num; ?>">▶</a>
 		</section>
 	</main>
 </body>
