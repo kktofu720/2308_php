@@ -58,17 +58,17 @@
 //    echo "\n";	
 // }
 
-// $int_line = 1;
-// $int_star = 1;
-// while($int_line <= 5) {
-// 	while($int_star <= $int_line) {
-// 		echo "*";
-// 		$int_star++;
-// 	}
-// 	$int_star = 1;
-// 	echo "\n";
-// 	$int_line++;
-// }
+$int_line = 1;
+$int_star = 1;
+while($int_line <= 5) {
+	while($int_star <= $int_line) {
+		echo "*";
+		$int_star++;
+	}
+	$int_star = 1;
+	echo "\n";
+	$int_line++;
+}
 
 // 다 되면 이렇게
 //     *
@@ -112,12 +112,12 @@
 // }
 
 // 1~9단
-for($i=1; $i<=9; $i++) {
-	for($z=1; $z<=9; $z++) {
-		$mul = $i * $z;
-		echo "{$i} X {$z} = {$mul}\n";
-	}
-}
+// for($i=1; $i<=9; $i++) {
+// 	for($z=1; $z<=9; $z++) {
+// 		$mul = $i * $z;
+// 		echo "{$i} X {$z} = {$mul}\n";
+// 	}
+// }
 // 1, 9단만
 
 
