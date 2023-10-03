@@ -105,7 +105,6 @@ try {
 				<th>제목</th>
 				<th>작성일자</th>
 			</tr>
-			<br>
 			<?php
 				// 리스트를 생성
 				foreach($result as $item) {
