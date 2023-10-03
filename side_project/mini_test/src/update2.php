@@ -1,17 +1,16 @@
 <?php
-define("ROOT", $_SERVER["DOCUMENT_ROOT"]."/mini_board/src/"); //웹서버 root 패스 생성
-define("FILE_HEADER", ROOT."header.php"); // 헤어 패스
-require_once(ROOT."lib/lib_db.php"); // DB 관련 라이브러리
+define("ROOT", $_SERVER["DOCUMENT_ROOT"]."/mini_test/src/"); // 웹서버 root 패스 생성
+define("FILE_HEADER", ROOT."header2.php"); // 헤더 패스
+require_once(ROOT."lib/lib2_db.php"); // DB 관련 라이브러리
 
 $conn = null; // DB 연결용 변수
 $id = isset($_GET["id"]) ? $_GET["id"] : $_POST["id"]; // id 셋팅
 $page = isset($_GET["page"]) ? $_GET["page"] : $_POST["page"]; // page 셋팅
 $http_method = $_SERVER["REQUEST_METHOD"]; // Method 확인
 
-
 try {
     // DB 연결
-	if(!my_db_conn($conn)) {
+	if(!my_db_conn2($conn)) {
         // DB Instance 에러
 		throw new Exception("DB ERROR : PDO Instance");
 	}
@@ -25,7 +24,7 @@ try {
             "id" => $id
         ];
         // 게시글 데이터 조회
-        $result = db_select_boards_id($conn, $arr_param);
+        $result = db_select_test_id($conn, $arr_param);
     
         // 게시글 조회 예외처리
         if($result === false) {
@@ -48,12 +47,12 @@ try {
         // 게시글 수정 처리
         $conn->beginTransaction(); // 트랜잭션 시작
 
-        if(!db_update_boards_id($conn, $arr_param)) { 
-            throw new Exception("DB Error : Update_boards_id");
+        if(!db_update_test_id($conn, $arr_param)) { 
+            throw new Exception("DB Error : Update_test_id");
         }
         $conn->commit(); // commit
         
-        header("Location: detail.php/?id={$id}&page={$page}"); // detail 페이지로 이동
+        header("Location: detail2.php/?id={$id}&page={$page}"); // detail 페이지로 이동
         exit;
     }
 
@@ -70,13 +69,12 @@ try {
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/mini_board/src/css/common.css">
+    <link rel="stylesheet" href="/mini_test/src/css/test.css">
     <title>수정 페이지</title>
 </head>
 <body>
@@ -84,7 +82,7 @@ try {
 		require_once(FILE_HEADER);
 	?>    
     <div>
-        <form action="/mini_board/src/update.php" method="post">
+        <form action="/mini_test/src/update2.php" method="post">
             <table class="detail-container">
                 <input type="hidden" name="id" value="<?php echo $id ?>">
                 <input type="hidden" name="page" value="<?php echo $page ?>">
@@ -107,12 +105,9 @@ try {
             </table>
             <div class="detail-a">
                 <button class="update-a" type="submit">수정확인</button>
-                <a class="update-a" href="/mini_board/src/detail.php/?id=<?php echo $id; ?>&page=<?php echo $page; ?>">수정취소</a>
+                <a class="update-a" href="/mini_test/src/detail2.php/?id=<?php echo $id; ?>&page=<?php echo $page; ?>">수정취소</a>
 	        </div>
         </form>
 	</div>
-	
-
-
 </body>
 </html>

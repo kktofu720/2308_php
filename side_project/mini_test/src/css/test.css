@@ -1,0 +1,214 @@
+@font-face {
+    font-family: 'MICEGothic Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/MICEGothic Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'MICEGothic Bold';
+}
+body {
+    margin: 0;
+	padding: 0;
+	background-color: rgb(249, 247, 206);
+	/* background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 0 153px ; */
+}
+header {
+	width: 100%;
+	background-color: rgb(255, 241, 119);
+	padding: 2rem;
+}
+header>h1 {
+	margin: 0;
+	/* color: #ffffff; */
+	text-align: center;
+	font-size: 4rem;
+}
+header>h1>a {
+	color: rgb(171, 102, 197);
+}
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: rgb(171, 102, 197);
+}
+main {
+	width: 1000px;
+	height: 600px;
+	margin: 50px auto;
+	position: relative;
+}
+/* .main-div {
+	width: 900px;
+	margin: auto;
+} */
+.main-div-a {
+	position: absolute;
+	bottom: 70px;
+	right: 50px;
+	width: 70px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	background-color: rgb(199, 236, 229);
+}
+.main-div-a:hover {
+    /* border: 1px solid #ffffff; */
+	color: rgb(149, 12, 199);
+}
+table {
+	border-collapse: collapse;
+	width: 900px;
+	height: 480px;
+	margin: 100px auto 60px auto;
+	font-size: 1.4rem;
+}
+tr, td {
+	/* border-bottom: 1px solid #424743; */
+    color: #454149;
+	text-align: center;
+}
+.table-title {
+    border-bottom: 1px solid #000;
+    background-color: rgb(176, 219, 211);
+    height: 70px;
+}
+section {
+    text-align: center;
+}
+.page-btn {
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	background-color: rgb(199, 236, 229);
+	border-radius: 30%;
+	color: rgb(171, 102, 197);
+}
+.act-btn {
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	background-color: rgb(171, 102, 197);
+	border-radius: 30%;
+	color: #ffffff;
+}
+.page-btn:hover {
+    /* border: 1px solid #ffffff; */
+	color: rgb(149, 12, 199);
+}
+/*********** insert 페이지 ************/
+.insert-field {
+	border: none;
+	text-align: center;
+}
+.insert-container {
+	text-align: center;
+	margin: 100px auto 20px auto;
+	width: 900px;
+	vertical-align: middle;
+	border: none;
+	display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.insert-tit {
+	padding: 10px;
+	border: none;
+	min-width: 600px;
+	height: 80px;
+	outline: none;
+	border-radius: 20px;
+	font-size: 1.7rem;
+}
+.insert-cont {
+	padding: 10px;
+	border: none;
+	min-width: 600px;
+	height: 300px;
+	border-radius: 20px;
+	outline: none;
+	resize: none;
+	font-size: 1.3rem;
+}
+.insert-butt {
+	padding: 0;
+	width: 50px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	color: #454149;
+	background-color : rgb(199, 236, 229); 
+	border: none;
+	font-size: 1.1rem;
+}
+.insert-butt:hover {
+	/* background-color: rgba(86, 153, 31, 0.7); */
+    /* border: 1px solid #ffffff; */
+	color: rgb(149, 12, 199);
+}
+.insert-container>label {
+	width: 900px;
+	height: 50px;
+	padding: 10px;
+	background-color: rgb(176, 219, 211);
+	border-radius: 20px;
+	color: rgb(171, 102, 197);
+	font-size: 2rem;
+}
+/*********** detail 페이지 ************/
+.detail-container {
+	width: 900px;
+	margin: 100px auto 30px auto;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 20px;
+	border: 15px solid rgb(176, 219, 211);
+}
+
+.detail-tr4 {
+	border : none;
+}
+.detail-a {
+	margin: 0;
+	text-align: center;
+}
+
+/********* update 페이지 *********/
+.update-a {
+	padding: 0;
+	width: 80px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	color: #454149;
+	background-color: rgb(199, 236, 229); 
+	border: none;
+	font-size: 1.1rem;
+}
+.update-a:hover {
+	/* background-color: rgba(86, 153, 31, 0.7); */
+    /* border: 1px solid #ffffff; */
+	color: rgb(149, 12, 199);
+}
+
+/********* delete 페이지 **********/
+.delete-main {
+	width: 1000px;
+	height: 600px;
+	margin: 50px auto 0px auto;
+}
+.delete-container {
+	width: 900px;
+	margin: 60px auto 0px auto;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 20px;
+	border: 15px solid rgb(176, 219, 211);
+}

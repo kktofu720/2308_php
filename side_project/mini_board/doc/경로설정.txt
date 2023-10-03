@@ -1,1 +1,6 @@
+학원
 xcopy D:\workspace\2308_php\side_project\mini_board\src C:\Apache24\htdocs\mini_board\src /E /Y
+
+
+집
+xcopy C:\Users\Administrator\Desktop\vscode연습\2308_php\2308_php-1\side_project\mini_board\src C:\Apache24\htdocs\mini_board\src /E /Y

@@ -1,6 +1,6 @@
 <?php
 define("ROOT", $_SERVER["DOCUMENT_ROOT"]."/mini_board/src/"); //웹서버 root 패스 생성
-define("FILE_HEADER", ROOT."header.php"); // 헤어 패스
+define("FILE_HEADER", ROOT."header.php"); // 헤더 패스
 require_once(ROOT."lib/lib_db.php"); // DB 관련 라이브러리
 
 $conn = null; // DB Connection 변수
@@ -19,21 +19,23 @@ try {
 	// ---------------
 
 	// 총 게시글 수 검색
-		$boards_cnt = db_select_boards_cnt($conn);
+	$boards_cnt = db_select_boards_cnt($conn);
 	if($boards_cnt === false) {
-		throw new Exception("DB Error : SELECT Count");
+		throw new Exception("DB Error : SELECT Count"); // 강제 예외발생 : DB SELECT Count
 	}
 
 	$max_page_num = ceil($boards_cnt / $list_cnt); // 최대 페이지 수
 
 	// GET Method 확인
-	if(isset($_GET["page"])) {
-		$page_num = $_GET["page"]; // 유저가 보내온 페이지 셋팅
-	}
+	// if(isset($_GET["page"])) {
+	// 	$page_num = $_GET["page"]; // 유저가 보내온 페이지 셋팅
+	// }
+	
+	// 삼항연산자로 작성할 경우
+	$page_num = isset($_GET["page"]) ? $_GET["page"] : 1;
+
 	$offset = ($page_num -1) * $list_cnt; // 오프셋 계산
 
-	// 삼항연산자로 작성할 경우
-	// $page_num = isset($_GET["page"]) ? $_GET["page"] : 1;
 
 	// 이전버튼
 	$prev_page_num = $page_num - 1;
@@ -103,6 +105,7 @@ try {
 				<th>제목</th>
 				<th>작성일자</th>
 			</tr>
+			<br>
 			<?php
 				// 리스트를 생성
 				foreach($result as $item) {
