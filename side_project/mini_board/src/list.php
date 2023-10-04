@@ -96,8 +96,8 @@ try {
 	<main>
 		<table>
 			<colgroup>
-				<col width="20%">
-				<col width="50%">
+				<col width="15%">
+				<col width="55%">
 				<col width="30%">
 			</colgroup>
 			<tr class="table-title">
@@ -146,4 +146,5 @@ try {
 		</section>
 	</main>
 </body>
+
 </html>

@@ -90,18 +90,18 @@ try {
                 <input type="hidden" name="page" value="<?php echo $page ?>">
                 <tr>
                     <th>글 번호</th>
-                    <td><?php echo $item["id"]; ?></td>
+                    <td class="update-td"><?php echo $item["id"]; ?></td>
                 </tr>
                 <tr>
                     <th>제목</th>
-                    <td>
-                        <input type="text" name="title" value="<?php echo $item["title"] ?>">
+                    <td class="update-td">
+                        <input class="update-tit" type="text" name="title" value="<?php echo $item["title"] ?>">
                     </td>
                 </tr>
                 <tr>
                     <th>내용</th>
-                    <td>
-                        <textarea name="content" id="content" cols="30" rows="10"><?php echo $item["content"] ?></textarea>
+                    <td class="update-td-cont">
+                        <textarea class="update-cont" name="content" id="content" cols="30" rows="10"><?php echo $item["content"] ?></textarea>
                     </td>
                 </tr>
             </table>

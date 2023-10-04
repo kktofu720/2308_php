@@ -61,7 +61,7 @@ if($http_method === "POST") {
 				<input class="insert-tit"type="text" name="title" id="title" placeholder="제목을 입력해 주세요.">
 			<br>
 				<label for="content">내용</label>
-				<textarea class="insert-cont" name="content" id="content" col="30" rows="10" placeholder="내용을 입력하세요."></textarea>
+				<textarea class="insert-cont" name="content" id="content" col="30" rows="10" placeholder="내용을 입력해 주세요."></textarea>
 			</div>
 			<br>
 			<button class="insert-butt" type="submit">작성</button>
