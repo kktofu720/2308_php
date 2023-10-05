@@ -82,6 +82,9 @@ tr, td {
 	color: #103a18;
 	text-align: center;
 }
+td {
+	word-break: break-all;
+}
 /* .list-td {
 	background-color: rgba(86, 153, 31, 0.7);
 	color: #ffffff;
@@ -129,7 +132,7 @@ a {
 }
 .insert-container {
 	text-align: center;
-	margin: 120px auto 20px auto;
+	margin: 80px auto 20px auto;
 	width: 800px;
 	vertical-align: middle;
 	border: none;
@@ -249,4 +252,21 @@ a {
 	background-color: rgba(255, 255, 255, 0.8);
 	/* border-radius: 20px; */
 	border: 15px solid rgba(86, 153, 31, 0.7);
+}
+/****** Error 페이지 ******/
+.error-butt {
+	padding: 0;
+	margin: 10px;
+	width: 100px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	color: black;
+	background-color: #ffffff; 
+	border: 2px solid rgba(86, 153, 31, 0.7);
+	font-size: 1.1rem;
+}
+.error-butt:hover {
+	background-color: rgba(86, 153, 31, 0.7);
+	color: #ffffff;
 }

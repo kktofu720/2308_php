@@ -1,5 +1,5 @@
 <header>
-	<h1><a href="/mini_board/src/list.php">mini Board🐈</a></h1>
+	<h1><a href="/mini_board/src/list.php">MINI BOARD🐈</a></h1>
 </header>
 
 <div class="snowflakes" aria-hidden="true">
