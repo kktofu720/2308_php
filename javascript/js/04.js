@@ -20,3 +20,4 @@
 const AGE = 19;
 // AGE = 20; // 재할당 불가능
 console.log(AGE);
+    
