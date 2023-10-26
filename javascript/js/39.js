@@ -61,3 +61,58 @@ TITLE.style.color = 'red';
 // classList : 클래스로 스타일 추가 또는 삭제
 TITLE.classList.add('class1', 'class2', 'class3');
 TITLE.classList.remove('class1', 'class3');
+
+
+// --------------------
+// 5. 새로운 요소 생성
+// --------------------
+// 요소 만들기
+// const LI = document.createElement('li');
+// LI.innerHTML = "글글글글";
+
+// // 삽입할 부모 요소 접근
+// const UL = document.querySelector('#ul');
+
+// // 부모요소의 가장 마지막 위치에 삽입
+// UL.appendChild(LI);
+
+// // 요소를 특정 위치에 삽입하는 방법
+// const SPACE = document.querySelector('ul li:nth-child(3)');
+
+// 해당 요소를 지우는 방법
+// LI.remove();
+
+// 1. 사과게임 위에 장기를 넣어주세요.
+const LI = document.createElement('li');
+LI.innerHTML = "장기";
+const UL = document.querySelector('#ul');
+const SPACE = document.querySelector('ul li:nth-child(4)');
+UL.insertBefore(LI, SPACE); // 위치전에넣는다(새로넣어줄요소, 위치)
+
+// const LIJANGI = document.createElement('li');
+// LIJANGI.innerHTML = "장기";
+// const UL = document.querySelector('#ul');
+// const LIAPPLE = document.getElementById('apple');
+// UL.insertBefore(LIJANGI, LIAPPLE);
+
+
+// 2. 어메이징브릭에 베이지 배경색을 넣어주세요.
+const BRICK = document.querySelector('ul li:nth-child(10)');
+BRICK.style.backgroundColor = 'beige';
+
+
+// 3. 리스트에서 짝수는 빨간색 글씨, 홀수는 파란색 글씨로 만들어주세요.
+const LIST = document.querySelectorAll('ul li');
+
+// for(let i = 0; i < LIST.length; i++) {
+//     if(i % 2 === 0) {
+//         LIST[i].style.color = 'blue';
+//     } else {
+//         LIST[i].style.color = 'red';
+//     }
+// }
+
+for(let i = 0; i <LIST.length; i++) {
+    LIST[i].style.color = i % 2 === 0 ? 'blue' : 'red';
+}
+
