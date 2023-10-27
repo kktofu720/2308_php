@@ -8,14 +8,24 @@
         #div1 {
             width: 200px;
             height: 200px;
-            background-color: steelblue;
+            /* background-color: steelblue; */
+            position: relative;
+        }
+        #div2 {
+            width: 100px;
+            height: 100px;
+            /* background-color: aquamarine; */
+            position: absolute;
+            top: 50px;
+            left: 50px;
         }
     </style>
 </head>
 <body>
     <button id="btn_hello">버튼</button>
     <br><br>
-    <div id="div1"></div>
+    <div id="div1"><div id="div2"></div></div>
+    
 
     <script src="./40.js"></script>
 </body>
