@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #000;
+    font-family: 'HS-Regular';
+}
+@font-face {
+    font-family: 'HS-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/HS-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+a {
+    text-decoration: none;
+}
+header {
+    width: 100%;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+}
+header > h1 {
+    font-size: 80px;
+}
+.main-body {
+    background-image: url(../img/메인배경.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-a {
+    display: inline-block;
+    width: 100%;
+    height: 99.5vh;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.main-div {
+    position: absolute;
+    font-size: 30px;
+    bottom: 0px;
+    right: 0px;
+}
+
+/* list 페이지  */
+.list-body {
+    background-image: url(../img/올배경.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.list-main {
+    width: 1100px;
+    height: 800px;
+    margin: 50px auto;
+}
+.list-table {
+    width: 1100px;
+    height: 600px;
+    border: 2px solid #000;
+    background-color: rgba(176, 160, 134, 0.8);
+    margin: 50px auto;
+}
+.list-main-div {
+
+}
+
+/* detail 페이지 */
+.detail-table {
+    width: 1100px;
+    height: 600px;
+    border: 2px solid #000;
+    background-color: rgba(176, 160, 134, 0.8);
+    margin: 50px auto;
+}
+
+/* insert 페이지 */
+/* delete 페이지 */
+/* update 페이지 */

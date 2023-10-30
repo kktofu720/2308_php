@@ -56,7 +56,7 @@ function db_select_boards_paging(&$conn, &$arr_param) {
 		."		,title "
 		."		,create_at "
 		." FROM "
-		."		boards "
+		."		board "
 		." WHERE"
 		." 		delete_flg = '0' "
 		." ORDER BY "
@@ -91,7 +91,7 @@ function db_select_boards_cnt(&$conn) {
 		" SELECT "
 		."		COUNT(id) as cnt " 
 		." 	FROM "
-		." 		boards "
+		." 		board "
 		." WHERE "
 		." 		delete_flg = '0' "
 		;
@@ -116,7 +116,7 @@ function db_select_boards_cnt(&$conn) {
 // --------------------------------
 function db_insert_boards(&$conn, &$arr_param) {
 	$sql = 	
-		" INSERT INTO boards ( "
+		" INSERT INTO board ( "
 		."		title "
 		."		,content "
 		." ) "
@@ -154,7 +154,7 @@ function db_select_boards_id(&$conn, &$arr_param) {
 		." 		,content "
 		."		,create_at "
 		." FROM "
-		." 		boards "
+		." 		board "
 		." WHERE "
 		." 		id = :id "
 		." AND "
@@ -189,7 +189,7 @@ function db_select_boards_id(&$conn, &$arr_param) {
 function db_update_boards_id(&$conn, &$arr_param) {
 	$sql = 
 		" UPDATE "
-		." 		boards "
+		." 		board "
 		." SET "
 		." 		title = :title "
 		." 		,content = :content "
@@ -225,7 +225,7 @@ function db_update_boards_id(&$conn, &$arr_param) {
 
 function db_delete_boards_id(&$conn, &$arr_param) {
 	$sql = 
-		" UPDATE boards "
+		" UPDATE board "
 		." SET "
 		." 		delete_at = now() "
 		." 		,delete_flg = '1' "

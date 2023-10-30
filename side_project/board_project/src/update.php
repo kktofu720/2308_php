@@ -118,7 +118,7 @@ try {
     <link rel="stylesheet" href="/board_project/src/css/board.css">
     <title>수정 페이지</title>
 </head>
-<body>
+<body class="list-body">
     <?php
 		require_once(FILE_HEADER);
 	?>    

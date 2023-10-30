@@ -80,19 +80,19 @@ try {
 	<link rel="stylesheet" href="/board_project/src/css/board.css">
 	<title>리스트 페이지</title>
 </head>
-<body>
+<body class="list-body">
 	 <?php
 	 	require_once(FILE_HEADER);
 	 ?>
-	<main>
-		<table>
+	<main class="list-main">
+		<table class="list-table">
 			<colgroup>
-				<col width="15%">
-				<col width="55%">
-				<col width="30%">
+				<col width="25%">
+				<col width="50%">
+				<col width="25%">
 			</colgroup>
-			<tr class="table-title">
-				<th class="">번호</th>
+			<tr>
+				<th>번호</th>
 				<th>제목</th>
 				<th>작성일자</th>
 			</tr>
@@ -111,7 +111,7 @@ try {
 				</tr>	
 			<?php	} ?>
 		</table>
-		<div class="main-div">
+		<div class="list-main-div">
 			<a class="main-div-a" href="/board_project/src/insert.php">글 작성</a>
 		</div>
 		<section>
