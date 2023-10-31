@@ -88,53 +88,53 @@ try {
 		<table class="list-table">
 			<colgroup>
 				<col width="25%">
-				<col width="50%">
-				<col width="25%">
+				<col width="45%">
+				<col width="30%">
 			</colgroup>
-			<tr>
-				<th>번호</th>
-				<th>제목</th>
-				<th>작성일자</th>
+			<tr class="list-tr1">
+				<th class="list-th">번호</th>
+				<th class="list-th">제목</th>
+				<th class="list-th">작성일자</th>
 			</tr>
 			<?php
 				// 리스트를 생성
 				foreach($result as $item) {
 			?>	
 				<tr>
-					<td><?php echo $item["id"]?></td>
-					<td>
+					<td class="list-td"><?php echo $item["id"]?></td>
+					<td class="list-td">
 						<a href="/board_project/src/detail.php/?id=<?php echo $item["id"]; ?>&page=<?php echo $page_num; ?>">
 							<?php echo $item["title"]?>
 						</a>
 					</td>
-					<td><?php echo $item["create_at"]?></td>
+					<td class="list-td"><?php echo $item["create_at"]?></td>
 				</tr>	
 			<?php	} ?>
 		</table>
-		<div class="list-main-div">
-			<a class="main-div-a" href="/board_project/src/insert.php">글 작성</a>
-		</div>
-		<section>
+		<section class="list-section">
 			<!-- 이전 페이지 -->
-			<a class="page-btn" href="/board_project/src/list.php/?page=<?php echo $prev_page_num; ?>">◀</a>
+			<a class="list-page-btn" href="/board_project/src/list.php/?page=<?php echo $prev_page_num; ?>">◀</a>
 			<?php
 				for($i = 1; $i <= $max_page_num; $i++) {
 					// 현재 페이지에 hover
 					if((int)$page_num === $i) {
 					?>
-					<a class="act-btn" href="/board_project/src/list.php/?page=<?php echo $i; ?>"><?php echo $i; ?></a>
+					<a class="list-act-btn" href="/board_project/src/list.php/?page=<?php echo $i; ?>"><?php echo $i; ?></a>
 					<?php
 					} else {
 					?>
-					<a class="page-btn" href="/board_project/src/list.php/?page=<?php echo $i; ?>"><?php echo $i; ?></a>
+					<a class="list-page-btn" href="/board_project/src/list.php/?page=<?php echo $i; ?>"><?php echo $i; ?></a>
 					<?php
 					}
 				}
 				?>		
 				
 				<!-- 다음 페이지  -->
-			<a class="page-btn" href="/board_project/src/list.php/?page=<?php echo $next_page_num; ?>">▶</a>
+			<a class="list-page-btn" href="/board_project/src/list.php/?page=<?php echo $next_page_num; ?>">▶</a>
 		</section>
+		<div class="list-main-div">
+			<a class="main-div-a" href="/board_project/src/insert.php">글 작성</a>
+		</div>
 	</main>
 </body>
 

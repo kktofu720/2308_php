@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    font-size: 100px;
+    color: #ffffff;
+    background-color: #000;
+    text-align: center;
+    padding: 30px;
+}
+.div1 {
+    width: 700px;
+    height: 80px;
+    padding-top: 30px;
+    margin: 0 auto;
+
+}
+#input-url {
+    width: 600px;
+}
+.div2 {
+    /* width: 1200px; */
+    /* height: auto; */
+    margin: 0 auto;
+    padding: 50px;
+}
+
+#div-img {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    text-align: center;
+    grid-gap: 20px;
+}

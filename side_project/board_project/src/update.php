@@ -124,7 +124,7 @@ try {
 	?>    
     <div>
         <form action="/board_project/src/update.php" method="post">
-            <table class="detail-container">
+            <table class="list-table">
                 <?php
 			    foreach($arr_err_msg as $val) {
 				?>
@@ -135,24 +135,24 @@ try {
                 <input type="hidden" name="id" value="<?php echo $id ?>">
                 <input type="hidden" name="page" value="<?php echo $page ?>">
               
-                <tr>
-                    <th>글 번호</th>
-                    <td class="update-td"><?php echo $item["id"]; ?></td>
+                <tr class="detail-tr">
+                    <th class="update-th">글 번호</th>
+                    <td class="detail-td"><?php echo $item["id"]; ?></td>
                 </tr>
-                <tr>
-                    <th>제목</th>
-                    <td class="update-td">
+                <tr class="detail-tr">
+                    <th class="update-th">제목</th>
+                    <td class="update-td-tit">
                         <input class="update-tit" type="text" name="title" value="<?php echo $item["title"] ?>">
                     </td>
                 </tr>
-                <tr>
-                    <th>내용</th>
+                <tr class="detail-tr">
+                    <th class="update-th">내용</th>
                     <td class="update-td-cont">
                         <textarea class="update-cont" name="content" id="content" cols="30" rows="10"><?php echo $item["content"] ?></textarea>
                     </td>
                 </tr>
             </table>
-            <div class="detail-a">
+            <div class="detail-btn">
                 <button class="update-a" type="submit">수정확인</button>
                 <a class="update-a" href="/board_project/src/detail.php/?id=<?php echo $id; ?>&page=<?php echo $page; ?>">수정취소</a>
 	        </div>

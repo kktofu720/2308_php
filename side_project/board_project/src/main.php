@@ -12,7 +12,8 @@ define("ROOT", $_SERVER["DOCUMENT_ROOT"]."/board_project/src/");
 </head>
 <body class="main-body">
     <a class="main-a" href="/board_project/src/list.php">
-        <div class="main-div">아무 곳이나 클릭해 주세요.</div>
+        <div class="main-jpg"></div>
     </a>
+    <div class="main-div">고양이를 클릭해 주세요.</div>
 </body>
 </html>
