@@ -92,3 +92,21 @@ function my_trash() {
 //         IMG[i].remove();
 //     }
 // } // 다른 방법
+
+
+// fetch 2번째 아규먼트 셋팅 방법
+function infinityLoop() {
+	let apiUrl = "http://112.222.157.156:6001/03_insert.php"
+	let init = {
+		method: "POST"
+		,body: {
+			title: "아이아이"
+			,content: "오오웅"
+			,em_id: "2"
+		}
+	};
+
+	fetch(apiUrl)
+	.then( response => console.log(response) )
+	.catch( error => console.log(error) );
+}

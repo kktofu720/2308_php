@@ -24,7 +24,7 @@ function my_fetch() {
 function makeImg(data) {
     data.forEach( item => {
         const NEW_IMG = document.createElement('img'); // img 태그 생성
-        const NEW_ID = document.createElement('H1'); // id나오는 h1 태그 생성
+        const NEW_ID = document.createElement('p'); // id나오는 p 태그 생성
         const NEW_DIV = document.createElement('div'); // h1와 img를 함께 묶어주는 div 태그 생성
         const DIV_IMG = document.querySelector('#div-img'); // id가 div-img에 접근
 

@@ -90,14 +90,16 @@ if($http_method === "POST") {
 				?>
 				<label for="title">제목</label>
 				<input class="insert-tit"type="text" name="title" id="title" value="<?php echo $title ?>"placeholder="제목을 입력해 주세요.">
-			<br>
+			<br><br><br>
 				<label for="content">내용</label>
 				<textarea class="insert-cont" name="content" id="content" col="30" rows="10" placeholder="내용을 입력해 주세요."><?php echo $content ?></textarea>
 			</div>
 			<br>
-			<button class="insert-butt" type="submit">작성</button>
-			<a class="insert-butt" href="/board_project/src/list.php">취소</a>
-		</fieldset>
+		</fieldset>	
+		<div class="insert-div-btn">
+			<button class="insert-btn" type="submit">작성</button>
+			<a class="insert-btn" href="/board_project/src/list.php">취소</a>
+		</div>
 	</form>
 	
 </body>

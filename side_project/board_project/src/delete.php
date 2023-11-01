@@ -102,39 +102,35 @@ try {
     <?php
     require_once(FILE_HEADER);
     ?>
-    <main class="delete-main">
-        <table class="delete-container">
-            <caption>
-                삭제하면 영구적으로 복구 할 수 없습니다.
-                <br>
-                정말로 삭제하시겠습니까?
-                <br><br>
-            </caption>
-            <tr>
-                <th>게시글 번호</th>
-                <td><?php echo $item["id"] ?></td>
-            </tr>
-            <tr>
-                <th>작성일</th>
-                <td><?php echo $item["create_at"] ?></td>
-            </tr>
-            <tr>
-                <th>제목</th>
-                <td><?php echo $item["title"] ?></td>
-            </tr>
-            <tr>
-                <th>내용</th>
-                <td><?php echo $item["content"] ?></td>
-            </tr>
-        </table>
-    </main>
-    <section class="detail-a">
+    <div class="delete-msg">
+        삭제하면 영구적으로 복구 할 수 없습니다.
+        <br>
+        정말로 삭제하시겠습니까?
+    </div>
+    <table class="delete-table">
+        <tr>
+            <th>게시글 번호</th>
+            <td><?php echo $item["id"] ?></td>
+        </tr>
+        <tr>
+            <th>작성일</th>
+            <td><?php echo $item["create_at"] ?></td>
+        </tr>
+        <tr>
+            <th>제목</th>
+            <td><?php echo $item["title"] ?></td>
+        </tr>
+        <tr>
+            <th>내용</th>
+            <td><?php echo $item["content"] ?></td>
+        </tr>
+    </table>
+    <section class="detail-section">
         <form action="/board_project/src/delete.php" method="post">
             <input type="hidden" name="id" value="<?php echo $id; ?>">
-            <button type="submit" class="insert-butt">동의</button>
-            <a class="insert-butt" href="/board_project/src/detail.php/?id=<?php echo $id; ?>&page=<?php echo $page; ?>">취소</a>
+            <button type="submit" class="insert-btn">동의</button>
+            <a class="insert-btn" href="/board_project/src/detail.php/?id=<?php echo $id; ?>&page=<?php echo $page; ?>">취소</a>
         </form>
     </section>
-
 </body>
 </html>

@@ -82,9 +82,9 @@ $input_id = $_GET["id"];
 			</tr>
 		</table>
 	<div class="detail-btn">
-		<a class="insert-butt" href="/board_project/src/update.php/?id=<?php echo $id; ?>&page=<?php echo $page; ?>">수정</a>
-		<a class="insert-butt" href="/board_project/src/list.php/?page=<?php echo $page; ?>">취소</a>
-		<a class="insert-butt" href="/board_project/src/delete.php/?id=<?php echo $id; ?>&page=<?php echo $page; ?>">삭제</a>
+		<a href="/board_project/src/update.php/?id=<?php echo $id; ?>&page=<?php echo $page; ?>">수정</a>
+		<a href="/board_project/src/list.php/?page=<?php echo $page; ?>">취소</a>
+		<a href="/board_project/src/delete.php/?id=<?php echo $id; ?>&page=<?php echo $page; ?>">삭제</a>
 	</div>
 </body>
 </html>

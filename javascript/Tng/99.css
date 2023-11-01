@@ -28,7 +28,9 @@ header {
 
 #div-img {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    /* minmax(300px, 1fr)은 부모 안에 자식들이 최소 300px씩 1fr만큼 일정한 비율로 차지함
+    예를 들어 부모안에 자식 5개가 있으면 20%씩, 4개 있으면 25%씩 차지함  */
     text-align: center;
-    grid-gap: 20px;
+    gap: 20px;
 }
