@@ -111,6 +111,7 @@ try {
 				</tr>	
 			<?php	} ?>
 		</table>
+		<br>
 		<section class="list-section">
 			<!-- 이전 페이지 -->
 			<a class="list-page-btn" href="/board_project/src/list.php/?page=<?php echo $prev_page_num; ?>">◀</a>

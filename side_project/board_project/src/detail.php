@@ -63,6 +63,7 @@ $input_id = $_GET["id"];
 	<?php
 		require_once(FILE_HEADER);
 	?>
+	<main class="list-main">
 		<table class="list-table">
 			<tr class="detail-tr">
 				<th class="detail-th">글 번호</th>
@@ -81,10 +82,12 @@ $input_id = $_GET["id"];
 				<td class="detail-td"><?php echo $item["create_at"]; ?></td>
 			</tr>
 		</table>
-	<div class="detail-btn">
-		<a href="/board_project/src/update.php/?id=<?php echo $id; ?>&page=<?php echo $page; ?>">수정</a>
-		<a href="/board_project/src/list.php/?page=<?php echo $page; ?>">취소</a>
-		<a href="/board_project/src/delete.php/?id=<?php echo $id; ?>&page=<?php echo $page; ?>">삭제</a>
-	</div>
+		<br>
+		<div class="detail-btn">
+			<a href="/board_project/src/update.php/?id=<?php echo $id; ?>&page=<?php echo $page; ?>">수정</a>
+			<a href="/board_project/src/list.php/?page=<?php echo $page; ?>">취소</a>
+			<a href="/board_project/src/delete.php/?id=<?php echo $id; ?>&page=<?php echo $page; ?>">삭제</a>
+		</div>
+	</main>
 </body>
 </html>

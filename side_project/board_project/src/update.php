@@ -122,7 +122,7 @@ try {
     <?php
 		require_once(FILE_HEADER);
 	?>    
-    <div>
+    <main class="list-main">
         <form action="/board_project/src/update.php" method="post">
             <table class="list-table">
                 <?php
@@ -152,12 +152,13 @@ try {
                     </td>
                 </tr>
             </table>
+            <br>
             <div class="detail-btn">
                 <button class="update-a" type="submit">수정확인</button>
                 <a class="update-a" href="/board_project/src/detail.php/?id=<?php echo $id; ?>&page=<?php echo $page; ?>">수정취소</a>
 	        </div>
         </form>
-	</div>
+	</main>
 	
 </body>
 </html>

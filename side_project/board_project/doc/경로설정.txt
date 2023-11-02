@@ -1,1 +1,5 @@
+과제 경로
 xcopy D:\workspace\2308_php\side_project\board_project\src C:\Apache24\htdocs\board_project\src /E /Y
+
+멀티보드 경로
+xcopy D:\workspace\2308_php\side_project\mini_multi_board C:\Apache24\htdocs\mini_multi_board /E /Y
