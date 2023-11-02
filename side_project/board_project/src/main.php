@@ -11,9 +11,11 @@ define("ROOT", $_SERVER["DOCUMENT_ROOT"]."/board_project/src/");
     <title>메인페이지</title>
 </head>
 <body class="main-body">
-    <a class="main-a" href="/board_project/src/list.php">
-        <div class="main-jpg"></div>
-    </a>
-    <div class="main-div">고양이를 클릭해 주세요.</div>
+    <main class="main-main">
+        <a class="main-a" href="/board_project/src/list.php">
+            <div class="main-jpg"></div>
+        </a>
+        <div class="main-div">고양이를 클릭해 주세요.</div>
+    </main>
 </body>
 </html>

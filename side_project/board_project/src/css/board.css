@@ -45,9 +45,9 @@ header > h1 {
     width: 500px;
     height: 447px;
     position: absolute;
-    top: 597px;
-    left: 501px;
-    opacity: 0%;
+    top: 0px;
+    left: 0px;
+    opacity: 50%;
 }
 .main-div {
     position: absolute;
@@ -142,7 +142,7 @@ td, th {
     width: 1100px;
     height: 600px;
     margin: 0 auto;
-    padding-top: 60px;
+    padding-top: 50px;
 }
 .insert-container > label {
     font-size: 40px;
@@ -199,7 +199,12 @@ td, th {
 } */
 .delete-tbody {
     width: 1100px;
-    height: 580px;
+    height: 531px;
+}
+.delete-th {
+    border-right: 1px solid #000;
+    background-color: rgba(215, 200, 169, 0.8);
+    width: 250px;
 }
 .delete-tr {
   font-size: 30px;
@@ -211,6 +216,7 @@ td, th {
     font-size: 30px;
     color: rgb(200, 0, 0);
     text-align: center;
+    text-shadow: 2px 2px #ababab;
     /* position: absolute;
     top: 0;
     left: 325px; */
@@ -218,7 +224,7 @@ td, th {
 
 
 .delete-section {
-
+    text-align: center;
 }
 
 /* update 페이지 */

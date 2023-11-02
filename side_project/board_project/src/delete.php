@@ -111,24 +111,25 @@ try {
         <table class="list-table">
             <tbody class="delete-tbody">
                 <tr class="delete-tr">
-                    <th>게시글 번호</th>
+                    <th class="delete-th">게시글 번호</th>
                     <td class="delete-td"><?php echo $item["id"] ?></td>
                 </tr>
                 <tr class="delete-tr">
-                    <th>제목</th>
+                    <th class="delete-th">제목</th>
                     <td class="delete-td"><?php echo $item["title"] ?></td>
                 </tr>
                 <tr class="delete-tr">
-                    <th>내용</th>
+                    <th class="delete-th">내용</th>
                     <td class="delete-td"><?php echo $item["content"] ?></td>
                 </tr>
                 <tr class="delete-tr">
-                    <th>작성일</th>
+                    <th class="delete-th">작성일</th>
                     <td class="delete-td"><?php echo $item["create_at"] ?></td>
                 </tr>
             </tbody>
         </table>
-        <section class="detail-section">
+        <br>
+        <section class="delete-section">
             <form action="/board_project/src/delete.php" method="post">
                 <input type="hidden" name="id" value="<?php echo $id; ?>">
                 <button type="submit" class="insert-btn">동의</button>
