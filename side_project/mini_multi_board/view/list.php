@@ -29,7 +29,7 @@
     </div> -->
     <main>
         <div class="card">
-            <img src="../side_project/board_project/src/img/메인배경.jpg" class="card-img-top" alt="...">
+            <img src="/view/img/메인배경.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">고양이</h5>
                 <p class="card-text">애옹</p>
@@ -42,7 +42,7 @@
             </div>
         </div>
         <div class="card">
-            <img src="../side_project/board_project/src/img/컴퓨터_배경화면.jpg" class="card-img-top" alt="...">
+            <img src="/view/img/컴퓨터_배경화면.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">고양이</h5>
                 <p class="card-text">애옹</p>
@@ -55,7 +55,7 @@
             </div>
         </div>
         <div class="card">
-            <img src="../side_project/board_project/src/img/컴퓨터_배경화면 (1).jpg" class="card-img-top" alt="...">
+            <img src="/view/img/컴퓨터_배경화면 (1).jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">고양이</h5>
                 <p class="card-text">애옹</p>
@@ -68,7 +68,7 @@
             </div>
         </div>
         <div class="card">
-            <img src="../side_project/board_project/src/img/컴퓨터_배경화면 (2).jpg" class="card-img-top" alt="...">
+            <img src="/view/img/컴퓨터_배경화면 (2).jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">고양이</h5>
                 <p class="card-text">애옹</p>
@@ -81,7 +81,7 @@
             </div>
         </div>
         <div class="card">
-            <img src="../side_project/board_project/src/img/컴퓨터_배경화면 (3).jpg" class="card-img-top" alt="...">
+            <img src="/view/img/컴퓨터_배경화면 (3).jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">고양이</h5>
                 <p class="card-text">애옹</p>

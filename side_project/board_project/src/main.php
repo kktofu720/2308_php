@@ -1,5 +1,6 @@
 <?php
 define("ROOT", $_SERVER["DOCUMENT_ROOT"]."/board_project/src/");
+define("FILE_HEADER", ROOT."header.php");
 ?>
 
 <!DOCTYPE html>
@@ -11,9 +12,12 @@ define("ROOT", $_SERVER["DOCUMENT_ROOT"]."/board_project/src/");
     <title>메인페이지</title>
 </head>
 <body class="main-body">
+    <?php
+        require_once(FILE_HEADER);
+    ?>
     <main class="main-main">
         <a class="main-a" href="/board_project/src/list.php">
-            <div class="main-jpg"></div>
+            <img class="main-img" src="/board_project/src/img/고양이그룹.png" alt="">
         </a>
         <div class="main-div">고양이를 클릭해 주세요.</div>
     </main>

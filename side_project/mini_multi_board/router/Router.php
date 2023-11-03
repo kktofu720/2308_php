@@ -26,13 +26,15 @@ class Router {
             if($method === "GET") {
                 // 해당 컨트롤러 호출
                 // new 클래스("메소드명");
-                new UserController("loginGet");
+                new UserController("loginGet"); // __construct가 실행
             } else {
                 // 해당 컨트롤러 호출
+                new UserController("loginPost");
             }
         } else if($url === "user/logout") {
             if($method === "GET") {
                 // 해당 컨트롤러 호출
+                new UserController("logoutGet");
             }
         } else if ($url === "user/regist") {
             if($method === "GET") {
