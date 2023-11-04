@@ -127,24 +127,24 @@ try {
 		<br>
 		<section class="list-section">
 			<!-- 이전 페이지 -->
-			<a class="list-page-btn" href="/board_project/src/list.php/?page=<?php echo $prev_page_num; ?>">◀</a>
+			<a href="/board_project/src/list.php/?page=<?php echo $prev_page_num; ?>">◀</a>
 			<?php
 				for($page_link = $block_start; $page_link <= $block_end; $page_link++) {
-					// 현재 페이지에 hover
+					// 현재 페이지
 					if($page_link == $page_num) {
 					?>
 					<a class="list-act-btn" href="/board_project/src/list.php/?page=<?php echo $page_link; ?>"><?php echo $page_link; ?></a>
 					<?php
 					} else {
 					?>
-					<a class="list-page-btn" href="/board_project/src/list.php/?page=<?php echo $page_link; ?>"><?php echo $page_link; ?></a>
+					<a href="/board_project/src/list.php/?page=<?php echo $page_link; ?>"><?php echo $page_link; ?></a>
 					<?php
 					}
 				}
 				?>		
 				
 				<!-- 다음 페이지  -->
-			<a class="list-page-btn" href="/board_project/src/list.php/?page=<?php echo $next_page_num; ?>">▶</a>
+			<a href="/board_project/src/list.php/?page=<?php echo $next_page_num; ?>">▶</a>
 		</section>
 		<div class="list-main-div">
 			<a class="list-a" href="/board_project/src/insert.php">글 작성</a>

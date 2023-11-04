@@ -128,7 +128,7 @@ try {
                 <?php
 			    foreach($arr_err_msg as $val) {
 				?>
-					<p><?php echo $val ?></p>
+					<p class="ErrorMsg"><?php echo $val ?></p>
 				<?php
 					}
 				?>

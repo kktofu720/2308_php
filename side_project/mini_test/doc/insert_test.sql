@@ -1,4 +1,4 @@
-INSERT INTO test(
+INSERT INTO board(
 	title
 	,content
 )
@@ -33,4 +33,4 @@ VALUES
 
 COMMIT;
 
-SELECT * FROM test;
+SELECT * FROM board;
