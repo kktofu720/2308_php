@@ -46,6 +46,12 @@ class Router {
             if($method === "GET") {
                 new BoardController("listGet");
             }
+        } else if($url === "board/add") {
+            if($method === "GET") {
+                // 처리없음
+            } else {
+                new BoardController("addPost");
+            }
         }
 
 
