@@ -10,6 +10,7 @@
 	서버의 response를 받아 동적으로 웹페이지를 갱신하는 프로그래밍 방식입니다.
 	즉, 웹 페이지 전체를 다시 로딩하지 않고도 일부분만을 갱신 할 수 있습니다.
 	대표적으로 XMLHttpRequest 방식과 Fetch Api 방식이 있습니다.
+	동적인 페이지를 만들기 위해 쓰는 기술
 
 3. JSON ( JavaScript Object Notation ) 이란? 문자열
 	JavaSctipt의 Object에 큰 영감을 받아 만들어진 서버 간의 HTTP 통신을 위한 텍스트 데이터 포맷입니다.

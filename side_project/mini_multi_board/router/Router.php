@@ -40,7 +40,7 @@ class Router {
             if($method === "GET") {
                 new UserController("registGet");
             } else {
-                // 해당 컨트롤러 호출
+                new UserController("registPost");
             }
         } else if($url === "board/list") {
             if($method === "GET") {
@@ -52,6 +52,10 @@ class Router {
             } else {
                 new BoardController("addPost");
             }
+        } else if($url === "board/detail") {
+            if($method === "GET") {
+                new BoardController("detailGet");
+            } 
         }
 
 

@@ -10,7 +10,7 @@
     <?php require_once("view/inc/header.php"); ?>
 
     <main class="d-flex justify-content-center align-items-center h-75">
-        <form style="width: 300px" action="/user/login" method="POST">
+        <form style="width: 420px" action="/user/login" method="POST">
             <div id="errorMsg" class="form-text text-danger">
               <?php echo count($this->arrErrorMsg) > 0 ? implode("<br>", $this->arrErrorMsg) : "" ?>
             </div>
@@ -23,6 +23,7 @@
               <input type="password" class="form-control" id="u_pw" name="u_pw">
             </div>
             <button type="submit" class="btn btn-dark">로그인</button>
+            <a href="/user/regist" class="btn btn-secondary float-end">회원가입</a>
           </form>
     </main>
 
