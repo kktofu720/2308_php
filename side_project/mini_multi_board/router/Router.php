@@ -42,6 +42,10 @@ class Router {
             } else {
                 new UserController("registPost");
             }
+        } else if($url === "user/idcheck") {
+            if($method === "GET") {
+                new UserController("idCheck");
+            }
         } else if($url === "board/list") {
             if($method === "GET") {
                 new BoardController("listGet");
@@ -56,7 +60,7 @@ class Router {
             if($method === "GET") {
                 new BoardController("detailGet");
             } 
-        }
+        } 
 
 
         // 없는 경로일 경우

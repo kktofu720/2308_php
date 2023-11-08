@@ -54,3 +54,27 @@ function closeDetailModal() {
     MODAL.classList.remove('show');
     MODAL.style = 'display : none;';
 }
+
+// 아이디체크
+function idCheck() {
+    const U_ID = document.querySelector('#u_id').value;
+    const URL = '/user/idcheck?u_id='+U_ID;
+    // URL에 대문자 x (개발자들끼리 약속)
+    const ID_CHK_MSG = document.querySelector('#id_chk_msg');
+    ID_CHK_MSG.innerHTML = "";
+
+    fetch(URL)
+    .then( response => response.json() )
+    .then( data => {
+        console.log(data);
+         if(data.data.cnt > 0) {
+            ID_CHK_MSG.innerHTML = "중복된 아이디가 존재합니다.";
+            ID_CHK_MSG.classList = 'text-danger';
+         } else {
+            ID_CHK_MSG.innerHTML = "사용가능한 아이디입니다.";
+            ID_CHK_MSG.classList = 'text-success';
+         }
+    })
+    .catch( error => console.log(error) )
+}
+

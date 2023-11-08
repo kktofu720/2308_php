@@ -61,4 +61,29 @@ class UserModel extends ParentsModel {
             exit();
         }
     }
+
+    // 유저 아이디 중복 체크
+    public function idCheck($u_id) {
+        $sql = 
+            " SELECT "
+            ."      COUNT(u_id) as cnt "
+            ." FROM user "
+            ." WHERE "
+            ."      u_id = :u_id ";
+
+        $prepare = [
+            ":u_id" => $u_id
+        ];
+
+        try {
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute($prepare);
+            $result = $stmt->fetchAll();
+            return $result;
+        } catch(Exception $e) {
+            echo "UserModel->idCheck Error : ".$e->getMessage();
+            exit();
+        }
+    }
+    
 }
