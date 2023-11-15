@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+main {
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding-bottom: 70px;
+}
