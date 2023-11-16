@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 use App\Models\Board;
 
 class BoardController extends Controller
@@ -16,10 +17,11 @@ class BoardController extends Controller
      */
     public function index()
     {
-        // 로그인 체크
-        if(!Auth::check()) {
-            return redirect()->route('user.login.get');
-        }
+        // ** del 20231116 미들웨어로 이관
+        // // 로그인 체크
+        // if(!Auth::check()) {
+        //     return redirect()->route('user.login.get');
+        // }
 
         // 게시글 획득
         $result = Board::get();
@@ -34,7 +36,7 @@ class BoardController extends Controller
      */
     public function create()
     {
-        //
+        return view('create');
     }
 
     /**
@@ -45,7 +47,19 @@ class BoardController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // 작성 처리(1)
+        $result = Board::create($request->only('b_title', 'b_content')); // 엘러퀀트
+        // $result->save(); // create에는 save가 필요x
+
+        // // 작성 처리(2)
+        // $arrInputData = $request->only('b_title', 'b_content');
+        // $result = Board::create($arrInputData);
+
+        // save()를 이용하는 방법
+        // $model = new Board($arrInputData);
+        // $model->save();
+
+        return redirect()->route('board.index');
     }
 
     /**
@@ -56,12 +70,24 @@ class BoardController extends Controller
      */
     public function show($id)
     {
-        $result = DB::table('boards')
-        ->select('b_title', 'b_content')
-        ->where('b_id', '=', $id)
-        ->get();
+        // $result = DB::table('boards')
+        // ->select('b_title', 'b_content')
+        // ->where('b_id', '=', $id) // '=' 은 생략가능 
+        // ->get();
 
-        return view('detail')->with('data',$result);
+        // $result = DB::table('boards')
+        //     ->where('b_id', '=', $id)
+        //     ->get();
+        $result = Board::find($id); // 엘로퀀트 방식
+
+        // 조회수 올리기
+        $result->b_hits++; // 조회수 1증가 // 엘로퀀트 방식
+        $result->timestamps = false;
+
+        // 업데이트 처리
+        $result->save(); // 엘로퀀트 방식
+
+        return view('detail')->with('data', $result); // data란 이름에 $result를 담아서 보내줌
     }
 
     /**
@@ -95,6 +121,9 @@ class BoardController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Log::debug("------- 삭제 처리 시작 -------");
+        Board::destroy($id);
+        Log::debug("------- 삭제 처리 종료 -------");
+        return redirect()->route('board.index');
     }
 }
