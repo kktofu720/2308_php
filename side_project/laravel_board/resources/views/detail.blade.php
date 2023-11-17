@@ -32,6 +32,7 @@
         @csrf
         @method('delete')
         <a href="{{route('board.index')}}" class="btn btn-secondary">이전으로</a>
+        <a href="{{route('board.edit', ['board' => $data->b_id])}}" class="btn btn-warning">수정</a>
         <button type="submit" class="btn btn-primary">삭제</button>
     </form>
 </main>

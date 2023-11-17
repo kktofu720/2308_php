@@ -98,7 +98,8 @@ class BoardController extends Controller
      */
     public function edit($id)
     {
-        //
+        $result = Board::find($id);
+        return view('edit')->with('data', $result);
     }
 
     /**
@@ -110,7 +111,25 @@ class BoardController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $result = Board::find($id);
+
+        $result->b_title = $request->b_title;
+        $result->b_content = $request->b_content;
+        $result->save();
+        
+        return redirect()->route('board.show', ['board' => $result->b_id]);
+        // return view('detail')->with('data', $result);
+
+        // 다른 방식
+        // $result = Board::find($id);
+        // $result2 = $request->only('b_title', 'b_content');
+        // $result->update($result2);
+
+        // 실패한 방식 : 수정은 되는데 hit 에러가 뜸
+        // $result = Board::find($id);
+        // $result = $result->update($request->only('b_title','b_content'));
+        // return redirect()->route('board.show', $result);
+
     }
 
     /**

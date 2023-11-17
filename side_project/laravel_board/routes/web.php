@@ -37,6 +37,7 @@ Route::middleware('auth')->resource('/board', BoardController::class);
 //   PUT|PATCH       board/{board} ............................ board.update › BoardController@update  
 //   DELETE          board/{board} .......................... board.destroy › BoardController@destroy  
 //   GET|HEAD        board/{board}/edit ........................... board.edit › BoardController@edit  
+// board/{board} 에 {board} 로 돼 있는 것은 {{route('board.update', ['board' => $data->b_id])}} []를 추가 해야함
 
 
 
