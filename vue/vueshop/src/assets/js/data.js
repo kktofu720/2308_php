@@ -4,3 +4,4 @@ export default [
     {'name': '바지', 'content': '매우 아름다운 바지입니다.', price: 50000, reportCnt: 0, img: require('@/assets/img/pants.jpg')},
     {'name': '신발', 'content': '매우 아름다운 신발입니다.', price: 100000, reportCnt: 0, img: require('@/assets/img/shoes.jpg')},
 ]
+// 한줄 한줄이 Object

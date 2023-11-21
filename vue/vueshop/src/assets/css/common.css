@@ -1,6 +1,7 @@
 .nav {
   background-color: #2c3e50;
   padding: 15px;
+  margin-top: 15px;
   border-radius: 10px;
 }
 .nav a {
@@ -26,6 +27,17 @@
 .m-img {
     width: 40%;
 }
+.discount {
+    background: beige;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    border: 2px solid #2c3e50;
+}
+
+
+
 
 /* 모달 등장 애니메이션 */
 .modalAni-enter-from {
