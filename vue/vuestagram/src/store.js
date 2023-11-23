@@ -10,15 +10,22 @@ const store = createStore({
 			imgURL: '', // 작성 탭 표시용 이미지 URL 저장용
 			postFileData: null, // 글 작성 파일데이터 저장용 
 			lastBoardId: 0, // 가장 마지막 로드 된 게시글 번호 저장용
+			flgBtnMoreView: true, // 더보기 버튼 활성여부 플래그
 		}
 	},
 
 	// mutations : 데이터 수정용 함수 저장 영역
 	// store 안에 있는 state와 mutations에 있는 state는 같다.
+	// unshift : unshift.변수명('추가값') - 변수명 맨 앞에 추가값(배열값) 추가
+	// push : push.변수명('추가값') - 변수명 맨 뒤에 추가값(배열값) 추가
 	mutations: {
 		setBoardList(state, data) {
 			state.boardData = data;
-			state.lastBoardId = data[data.length - 1].id;
+			this.commit('setLastBoardId', data[data.length - 1].id);
+		},
+		// 마지막 게시글 번호 셋팅용
+		setLastBoardId(state, num) {
+			state.lastBoardId = num;
 		},
 		// 탭ui 셋팅용
 		setFlgTabUI(state, num) {
@@ -39,12 +46,18 @@ const store = createStore({
 		// 작성 후 초기화 처리
 		setClearAddData(state) {
 			state.imgURL = '';
-			state.postFileData = null;
+			this.commit('setPostFileData', null);
+			// state.postFileData = null;
 		},
+		// 더보기 버튼 누르면 글 더 보이기
 		setMoreBoardList(state, data) {
 			state.boardData.push(data);
-			state.lastBoardId = state.boardData[state.boardData.length - 1].id;
+			// state.lastBoardId = state.boardData[state.boardData.length - 1].id;
 		},
+		// 더보기 버튼 활성화
+		setFlgBtnMoreView(state, boo) {
+			state.flgBtnMoreView = boo;
+		}
 	},
 
 	// actions : ajax로 서버에 데이터를 요청할 때나 시간 함수등 비동기 처리는 actions에 정의
@@ -107,11 +120,17 @@ const store = createStore({
 			};
 			axios.get(url, header)
 			.then(res => {
-				context.commit('setMoreBoardList', res.data);
+				// 빈 게시글이 뜨는 것을 막음
+				if(res.data) {
+					// 데이터 있을 경우
+					context.commit('setMoreBoardList', res.data);
+					context.commit('setLastBoardId', res.data.id);
+				} else {
+					// 데이터 없을 경우
+					context.commit('setFlgBtnMoreView', false);
+				}
 			})
-			.catch(err => {
-				console.log(err);
-			});
+			.catch(err => console.log(err.response.data))
 
 		}
 
