@@ -1,15 +1,19 @@
-* {
-	width: 0;
-	padding: 0;
+body * {
+	/* width: 0;
+	padding: 0; */
 	box-sizing: border-box;
 }
 a {
 	text-decoration: none;
 }
-div {
+/* div {
 	width: 100%;
-}
+} */
 .logo {
+	display: inline-block;
+    width: 194px;
+}
+.logo_img {
 	width: 100%;
 }
 .in_header {
@@ -18,43 +22,85 @@ div {
     position: fixed;
     top: 0;
     left: 0;
-    /* z-index: 999; */
+    z-index: 999;
     background: #fff;
     transition: .3s ease;
+	/* background-color: beige; */
 }
-.logo_img {
-	width: 200px;
-	height: 60px;
-}
+
 .container {
 	width: 1150px;
     margin: 0 auto;
     position: relative;
-	background-color: antiquewhite;
+	/* background-color: aquamarine; */
 }
 /* .nav {
 	width: 100%;
 } */
+.topbar {
+	text-align: right;
+    padding-top: 18px;
+}
+.topbar li {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: #8b8b8b;
+}
+.topbar li:after {
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    margin: 14px;
+    vertical-align: middle;
+    background: #e0e0e0;
+    content: '';
+}
+.topbar .sns {
+    margin: 0 3px;
+    font-size: 0;
+    vertical-align: middle;
+}
+.topbar .sns.f a:before {
+    content: url(../userimg/facebook.jpg);
+}
+.topbar .sns.i a:before {
+    content: url(../userimg/insta.jpg);
+}
 .nav_wrap {
-	/* width: 100%; */
-	/* margin-top: -20px; */
+	width: 100%;
+	margin-top: -20px;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
 }
-/* .navbar {
-	margin: 0 -39px;
-} */
+
 
 ul {
-	width: 100%;
+	margin: 0;
+	padding: 0;
 	list-style: none;
 }
 
+.navbar {
+	margin: 0 -39px;
+}
 .navbar>li {
 	display: inline-block;
-    /* padding: 0 39px; */
+    padding: 0 39px;
     list-style: none;
     font-size: 0.937rem;
-	width: 150px;
+	width: auto;
+}
+
+/* 헤더 끝*/
+/* 메인 시작 */
+#content-wrap {
+	padding-top: 123px;
+	background-color: blueviolet;
+}
+.main_visual_wrap {
+	overflow: hidden;
+    position: relative;
+    text-align: center;
 }

@@ -2,11 +2,15 @@
 	<div class="in_header">
 		<div class="sub_bg"></div>
 		<div class="container">
-			{{-- <ul class="">
+			<ul class="topbar">
 				<li><a href="">더본코리아</a></li>
-				<li><a href="https://ko-kr.facebook.com/ipaikscoffee/">facebook</a></li>
-				<li><a href="https://www.instagram.com/paikscoffee_official/">instagram</a></li>
-			</ul> --}}
+				<li class="sns f">
+					<a href="https://ko-kr.facebook.com/ipaikscoffee/" target="_blank">facebook</a>
+				</li>
+				<li class="sns i">
+					<a href="https://www.instagram.com/paikscoffee_official/" target="_blank">instagram</a>
+				</li>
+			</ul>
 			<div class="nav_wrap">
 				<a class="logo" href="">
 					<img class="logo_img" src="../userimg/logo.png" alt="">
