@@ -8,6 +8,8 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <App-Component :laravel-Data="{{ $data }}" ></App-Component>
+    </div>
 </body>
 </html>
