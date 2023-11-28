@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="/css/common.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <title>Document</title>
 </head>
 <body>
@@ -16,8 +17,31 @@
 				<main class="site-main">
 					<article>
 						<div class="entry-content">
-							<div class="main_visual_wrap">
-
+							<div class="main_visual_wrap swiper-container-horizontal swiper-container-wp8-horizontal">
+								<div class="swiper-wrapper" style="transition-duration: 0ms; trasform: translate3d(-4077px, 0px, 0px);">
+									<div class="swiper-slide swiper-slide-duplicate" style="width: 1359px;">
+										<img src="../userimg/pop1" alt="">
+									</div>
+									<div>
+										<img src="../userimg/pop2" alt="">
+									</div>
+									<div>
+										<img src="../userimg/pop3" alt="">
+									</div>
+									<div>
+										<img src="../userimg/pop4" alt="">
+									</div>
+									<div>
+										<img src="../userimg/pop5" alt="">
+									</div>
+									<div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+										<span class="swiper-pagination-bullet"></span>
+										<span class="swiper-pagination-bullet"></span>
+										<span class="swiper-pagination-bullet"></span>
+										<span class="swiper-pagination-bullet"></span>
+										<span class="swiper-pagination-bullet"></span>
+									</div>
+								</div>
 							</div>
 							<div class="main_section">
 								<section class="main_sec1">
@@ -29,10 +53,12 @@
 													<br>
 													STORY
 												</dt>
-												<dd></dd>
+												<dd>
+													균형잡힌 바디감으로 긴 여운을 남기는 빽다방 커피를 만나보세요.
+												</dd>
 											</dl>
 										</a>
-										<a href=""></a>
+										<a class="view_btn" href=""></a>
 									</div>
 									<div class="right_wrap">
 										<a href="">
@@ -42,7 +68,9 @@
 													<br>
 													STORY
 												</dt>
-												<dd></dd>
+												<dd>
+													합리적인 가격으로 만나는 맛있고 든든한 빽다방
+												</dd>
 											</dl>
 										</a>
 										<a href=""></a>
@@ -50,13 +78,17 @@
 								</section>
 								<section class="main_sec2">
 									<a href="">
-										<dl>
+										<dl class="main_tt">
 											<dt>
 												FRESH
 												<br>
 												COFFEE
 											</dt>
-											<dd></dd>
+											<dd>
+												신선한 뉴크롭 원두를 사용하여
+												<br>
+												추출한 커피메뉴!
+											</dd>
 										</dl>
 										<img src="../userimg/main_sec2.jpg" alt="sec2">
 									</a>
@@ -65,13 +97,17 @@
 								<section class="main_sec3">
 									<div class="left_wrap">
 										<a href="">
-											<dl>
+											<dl class="main_tt">
 												<dt>
 													VARIOUS
 													<br>
 													BEVERAGE
 												</dt>
-												<dd></dd>
+												<dd>
+													에이드, 티, 주스 등 취향대로
+													<br>
+													골라 먹는 즐거움!
+												</dd>
 											</dl>
 											<img src="../userimg/main_sec3_l.jpg" alt="sec3-left">
 										</a>
@@ -79,13 +115,17 @@
 									</div>
 									<div class="right_wrap">
 										<a href="">
-											<dl>
+											<dl class="main_tt">
 												<dt>
 													SWEET
 													<br>
 													PAIK'S CCINO
 												</dt>
-												<dd></dd>
+												<dd>
+													달콤한 아이스크림부터
+													<br>
+													든든한 브레드까지!
+												</dd>
 											</dl>
 											<img src="../userimg/main_sec3_r.jpg" alt="sec3-right">
 										</a>
@@ -95,7 +135,7 @@
 								<section class="main_sec4">
 									<div class="right_wrap">
 										<a href="">
-											<dl>
+											<dl class="main_tt">
 												<dt>
 													TASTY
 													<br>
@@ -111,22 +151,51 @@
 									</div>
 									<div></div>
 								</section>
+								<div class="main_sns">
+									<dl class="sns_tt">
+										<dt>PAIK'S COFFEE SNS</dt>
+										<dd>
+											<span>#빽다방</span>
+											<span>#빽다방신메뉴</span>
+											<span>#빽다방이벤트</span>
+										</dd>
+									</dl>
+									<ul class="sns_icon">
+										<li>
+											<a href="https://ko-kr.facebook.com/ipaikscoffee/">
+												<img src="../userimg/big-facebook.png" target="_blank" alt="">
+											</a>
+										</li>
+										<li>
+											<a href="https://www.instagram.com/paikscoffee_official/">
+												<img src="../userimg/big-insta.png" target="_blank" alt="">
+											</a>
+										</li>
+									</ul>
+									<div class="feed_box">
+										<ul> </ul>
+									</div>
+								</div>
 							</div>
 
 						</div>
-						
+						{{-- , entry-content --}}
 
 						
 					</article>
-					
+					{{-- #post-## --}}
 				</main>
+				{{-- .site-main --}}
 			</div>
+			{{-- .content-area --}}
 			
 		</div>
+		{{-- END #content-wrap --}}
+		@include('inc.footer')
 
 	</div>
 	{{-- 다른 템플릿을 포함시키는 방법 --}}
 	
-	
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </body>
 </html>
