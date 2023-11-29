@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="/css/common.css">
 	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-    <title>Document</title>
+    <title>짭다방</title>
 </head>
 <body>
 	<div id="wrap">
@@ -149,7 +149,33 @@
 										</a>
 										<a href=""></a>
 									</div>
-									<div></div>
+									<div class="left_wrap">
+										<div class="store_bn">
+											<dl>
+												<dt>STORE</dt>
+												<dd>원하시는 지역의 매장을 검색해보세요!</dd>
+											</dl>
+											<div class="store_search">
+												<form action="">
+													<input type="text" placeholder="Find a store in your area!">
+													<button>
+														<img src="" alt="">
+													</button>
+												</form>
+											</div>
+										</div>
+										<div class="franchise_bn">
+											<a href="">
+												<dl>
+													<dt>FRANCHISE</dt>
+													<dd>빽다방 창업안내를 도와드리겠습니다.</dd>
+												</dl>
+											</a>
+											<a href="">
+												<span></span>
+											</a>
+										</div>
+									</div>
 								</section>
 								<div class="main_sns">
 									<dl class="sns_tt">

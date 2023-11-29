@@ -21,3 +21,8 @@ Route::get('/home', function () {
     return view('home');
 });
 
+Route::get('/member/login', function () {
+    return view('auth.login');
+});
+
+

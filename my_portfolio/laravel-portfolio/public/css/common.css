@@ -12,6 +12,12 @@ body {
 img {
     width: 100%;
 }
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
 /* div {
 	width: 100%;
 } */
@@ -87,12 +93,6 @@ img {
     justify-content: space-between;
 }
 
-
-ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
 
 .navbar {
 	margin: 0 -39px;
@@ -219,6 +219,38 @@ ul {
 .main_sec3 .right_wrap {
     width: 40%;
 }
+.main_sec4 {
+
+}
+.main_sec4 .right_wrap {
+    position: static;
+    width: 54%;
+    height: 615px;
+    float: right;
+}
+.main_sec4 .left_wrap {
+    width: calc(46% - 30px);
+    float: right;
+    margin: 0 15px;
+}
+.main_sec4 .left_wrap > div {
+    position: relative;
+    height: 300px;
+    border: 2px solid #071f60;
+}
+.main_sec4 .left_wrap dt {
+    font-size: 40px;
+    font-weight: 700px;
+}
+.main_sec4 .left_wrap dd {
+    font-size: 18px;
+}
+.main_sec4 .left_wrap .franchise_bn {
+    width: 100%;
+    float: left;
+    background: url(../userimg/main_sec6.png) no-repeat bottom right;
+    background-size: 230px auto;
+}
 .main_sns {
     padding: 60px 4% 80px;
     text-align: center;
@@ -229,6 +261,8 @@ ul {
 .main_sns .sns_icon li img {
     width: 35px;
 }
+
+/* ------------------- */
 /* 푸터 시작 */
 footer {
     border-top: 3px solid #ffe600;
