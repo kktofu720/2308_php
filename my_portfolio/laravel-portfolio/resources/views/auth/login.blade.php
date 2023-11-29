@@ -46,8 +46,6 @@
 					<h1>Welcome Back!</h1>
 					<p>
 						빽다방에 오신 것을 환영합니다.
-						<br>
-						고객님께서 설정하신 아이디와 비밀번호를 입력해 주세요.
 					</p>
 					<button class="ghost1" id="signIn">로그인</button>
 				</div>
@@ -55,8 +53,9 @@
 					{{-- <img src="../userimg/logo-2.png" alt=""> --}}
 					<div class="paik_div"><img src="../userimg/paik.png" alt=""></div>
 					<h1>Hello, Friend!</h1>
-					<p>가입을 통해 더 다양한 서비스를 만나보세요</p>
+					<p>가입을 통해 더 다양한 서비스를 만나보세요.</p>
 					<button class="ghost2" id="signUp">회원가입</button>
+					{{-- onclick="location.href=''" --}}
 				</div>
 			</div>
 		</div>
