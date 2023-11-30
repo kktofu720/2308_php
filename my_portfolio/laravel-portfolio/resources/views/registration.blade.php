@@ -5,13 +5,13 @@
 @section('main')
 <div class="container" id="container">
 		<div class="form-container sign-up-container">
-			<form method="POST" action="" class="form" id="form1">
+			<form method="POST" action="{{route('member.registration.post')}}" class="form" id="form1">
 				@csrf
 				<a href="/home"><img class="home_img" src="../userimg/home.png" alt=""></a>
 				<h1>회원가입</h1>
-				<input type="text" placeholder="Name" />
-				<input type="email" placeholder="Email" />
-				<input type="password" placeholder="Password" />
+				<input type="text" name="name" placeholder="Name" />
+				<input type="email" name="email" placeholder="Email" />
+				<input type="password" name="password" placeholder="Password" />
 				<button class="btn_res">회원가입</button>
 			</form>
 		</div>

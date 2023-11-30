@@ -17,12 +17,12 @@
 			</form>
 		</div> --}}
 		<div class="form-container sign-in-container">
-			<form method="POST" action="" class="form" id="form2">
+			<form method="POST" action="{{route('member.login.post')}}" class="form" id="form2">
 				@csrf
 				<a href="/home"><img class="home_img" src="../userimg/home.png" alt=""></a>
 				<h1>로그인</h1>
-				<input type="email" placeholder="Email" />
-				<input type="password" placeholder="Password" />
+				<input type="email" name="email" placeholder="Email" />
+				<input type="password" name="password" placeholder="Password" />
 		{{-- <a href="#">Forgot your password?</a> --}}
 				<button type="submit" class="btn_log">로그인</button>
 			</form>

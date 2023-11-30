@@ -17,7 +17,7 @@ use App\Http\Controllers\BoardController;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home') ;
 
 Route::get('/home', function () {
     return view('home');
@@ -46,13 +46,13 @@ Route::get('/member/logout', [UserController::class, 'logoutget'])->name('member
 
 // 보드 관련
 Route::middleware('auth')->resource('/board', BoardController::class);
-//   GET|HEAD        board ...................................... board.index › BoardController@index  
-//   POST            board ...................................... board.store › BoardController@store  
-//   GET|HEAD        board/create ............................. board.create › BoardController@create  
-//   GET|HEAD        board/{board} ................................ board.show › BoardController@show  
-//   PUT|PATCH       board/{board} ............................ board.update › BoardController@update  
-//   DELETE          board/{board} .......................... board.destroy › BoardController@destroy  
-//   GET|HEAD        board/{board}/edit ........................... board.edit › BoardController@edit  
+//   GET|HEAD        board ...................................... board.index › BoardController@index   리스트페이지 이동
+//   POST            board ...................................... board.store › BoardController@store   작성 처리
+//   GET|HEAD        board/create ............................. board.create › BoardController@create   작성페이지로 이동
+//   GET|HEAD        board/{board} ................................ board.show › BoardController@show   상세페이지로 이동
+//   PUT|PATCH       board/{board} ............................ board.update › BoardController@update   수정 처리
+//   DELETE          board/{board} .......................... board.destroy › BoardController@destroy   삭제 처리
+//   GET|HEAD        board/{board}/edit ........................... board.edit › BoardController@edit   수정 페이지로 이동
 // board/{board} 에 {board} 로 돼 있는 것은 {{route('board.update', ['board' => $data->b_id])}} []를 추가 해야함
 
 

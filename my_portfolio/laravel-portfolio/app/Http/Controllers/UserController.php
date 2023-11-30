@@ -14,7 +14,7 @@ class UserController extends Controller
     public function loginget() {
         // 로그인 한 유저는 보드 리스트로 이동
         if(Auth::check()) {
-            return redirect()->route('board.index');
+            return redirect()->route('home');
         }
 
         return view('login');
@@ -39,7 +39,7 @@ class UserController extends Controller
         $result = User::where('email', $request->email)->first();
         if(!$result || !(Hash::check($request->password, $result->password))) {
             $errorMsg = '아이디와 비밀번호를 다시 확인해 주세요.';
-            return view('login')->withErrors($errorMsg);
+            return redirect()->route('member.login.get')->withErrors($errorMsg);
         }
 
         // 유저 인증작업
@@ -51,7 +51,7 @@ class UserController extends Controller
             return view('login')->withErrors($errorMsg);
         }
 
-        return redirect()->route('board.index');
+        return redirect()->route('home');
     }
     public function registrationget() {
         return view('registration');
@@ -81,12 +81,12 @@ class UserController extends Controller
         // 회원 정보 DB에 저장
         $result = User::create($data);
 
-        return redirect()->route('user.login.get');
+        return redirect()->route('member.login.get');
     }
 
     public function logoutget() {
         Session::flush(); // 세션파기
         Auth::logout(); // 로그아웃
-        return redirect()->route('user.login.get');
+        return redirect()->route('home');
     }
 }
