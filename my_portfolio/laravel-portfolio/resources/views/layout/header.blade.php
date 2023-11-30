@@ -5,7 +5,7 @@
 			<ul class="topbar">
 				<li><a href="https://www.theborn.co.kr/" target="_blank">더본코리아</a></li>
 				<li><a href="/member/login">멤버십 로그인</a></li>
-				<li><a href="">멤버십 가입</a></li>
+				<li><a href="/member/registration">멤버십 가입</a></li>
 				<li class="sns f">
 					<a href="https://ko-kr.facebook.com/ipaikscoffee/" target="_blank">facebook</a>
 				</li>

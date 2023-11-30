@@ -142,10 +142,10 @@ input {
 }
 
 .sign-up-container {
-  left: 0;
+  left: 384px;
   width: 50%;
-  opacity: 0;
-  z-index: 1;
+  opacity: 1;
+  z-index: 101;
 }
 
 .container.right-panel-active .sign-up-container {
@@ -173,7 +173,7 @@ input {
   left: 50%;
   width: 50%;
   height: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   transition: transform 0.6s ease-in-out;
   z-index: 100;
 }
@@ -217,9 +217,9 @@ input {
   transition: transform 0.6s ease-in-out;
 }
 
-.overlay-left {
+/* .overlay-left {
   transform: translateX(-20%);
-}
+} */
 .overlay-left>h1, .overlay-left>p {
 	color: #071f60;
 }

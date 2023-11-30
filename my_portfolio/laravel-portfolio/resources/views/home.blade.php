@@ -10,7 +10,7 @@
 </head>
 <body>
 	<div id="wrap">
-		@include('inc.header')
+		@include('layout.header')
 		{{-- 메인 --}}
 		<div id="content-wrap">
 			<div class="content-area">
@@ -217,7 +217,7 @@
 			
 		</div>
 		{{-- END #content-wrap --}}
-		@include('inc.footer')
+		@include('layout.footer')
 
 	</div>
 	{{-- 다른 템플릿을 포함시키는 방법 --}}
