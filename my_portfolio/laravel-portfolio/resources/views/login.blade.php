@@ -18,6 +18,7 @@
 		</div> --}}
 		<div class="form-container sign-in-container">
 			<form method="POST" action="{{route('member.login.post')}}" class="form" id="form2">
+				@include('layout.errorlayout')
 				@csrf
 				<a href="/home"><img class="home_img" src="../userimg/home.png" alt=""></a>
 				<h1>로그인</h1>

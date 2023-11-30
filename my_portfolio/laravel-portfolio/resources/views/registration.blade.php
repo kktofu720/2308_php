@@ -6,6 +6,7 @@
 <div class="container" id="container">
 		<div class="form-container sign-up-container">
 			<form method="POST" action="{{route('member.registration.post')}}" class="form" id="form1">
+				@include('layout.errorlayout')
 				@csrf
 				<a href="/home"><img class="home_img" src="../userimg/home.png" alt=""></a>
 				<h1>회원가입</h1>
@@ -21,7 +22,7 @@
 				<h1>로그인</h1>
 				<input type="email" placeholder="Email" />
 				<input type="password" placeholder="Password" />
-				<button class="btn_log">로그인</button>
+				<button class="btn_log">로그인 </button>
 			</form>
 		</div> --}}
 		<div class="overlay-container">
