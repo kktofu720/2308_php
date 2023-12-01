@@ -1,4 +1,4 @@
 @forelse ($errors->all() as $val)
-<div id="errorMsg">{{$val}}</div>
+<div id="errorMsg" style="color: red; font-size: 13px;">{{$val}}</div>
 @empty
 @endforelse

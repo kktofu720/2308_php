@@ -10,9 +10,9 @@
 				@csrf
 				<a href="/home"><img class="home_img" src="../userimg/home.png" alt=""></a>
 				<h1>회원가입</h1>
-				<input type="text" name="name" placeholder="Name" />
-				<input type="email" name="email" placeholder="Email" />
-				<input type="password" name="password" placeholder="Password" />
+				<input type="text" name="name" placeholder="이름을 입력해주세요." />
+				<input type="email" name="email" placeholder="이메일을 입력해주세요." />
+				<input type="password" name="password" placeholder="비밀번호를 입력해주세요." />
 				<button class="btn_res">회원가입</button>
 			</form>
 		</div>
