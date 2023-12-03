@@ -44,6 +44,7 @@
                                     <p class="b_desc_h4">고객의 소리</p>
                                     <p>빽다방에 전하고 싶은 불만, 칭찬을 보내주세요. 항상 고객님들의 목소리에 귀 기울이겠습니다.</p>
                                     <form method="POST" id="customer_form" enctype="multipart/form-data" action="">
+                                        @csrf
                                         <input type="hidden" name="erp_code" id="ttms_code">
                                         <input type="hidden" name="ttms_code" id="ttms_code">
                                         <div class="b_form">
