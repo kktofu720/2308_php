@@ -75,7 +75,7 @@
 								<li><a href="">인테리어</a></li>
 							</ul>
 						</li>
-						<li><a href="">고객의 소리</a></li>
+						<li><a href="{{ route('board.index')}}">고객의 소리</a></li>
 					</ul>
 				</div>
 			</div>    

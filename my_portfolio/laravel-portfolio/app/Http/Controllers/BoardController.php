@@ -26,7 +26,7 @@ class BoardController extends Controller
         // 게시글 획득
         $result = Board::get();
 
-        return view('home')->with('data', $result);
+        return view('list')->with('data', $result);
     }
 
     /**
