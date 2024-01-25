@@ -3,6 +3,12 @@ namespace App\Http\Utils;
 
 use App\Models\User;
 use App\Http\Utils\EncrypUtil;
+use Exception;
+use Carbon\Carbon;
+use App\Exceptions\MyDBException;
+use Illuminate\Support\Facades\DB;
+use App\Models\Token;
+use Illuminate\Support\Facades\Log;
 
 class TokenUtil {
 
@@ -12,6 +18,7 @@ class TokenUtil {
 	 * @param App\Models\User $userInfo 유저정보
 	 * @return list [$accessToken, $refreshToken]
 	 */
+	// 접근제어 지시자 : public , protected
 	public function createTokens(User $userInfo) {
 		$accessToken = $this->createToken($userInfo, env('TOKEN_EXP_ACCESS'));
 		$refreshToken = $this->createToken($userInfo, env('TOKEN_EXP_REFRESH'));
@@ -107,4 +114,62 @@ class TokenUtil {
 
 		return $payloadDecoded->$key;
 	} 
+
+	/**
+	 * 토큰 체크
+	 * 
+	 * @param string|null $token 베어럴 토큰
+	 * @return boolean true
+	 */
+	public function chkToken(string|null $token) {
+		// 토큰 존재 유무
+		if(empty($token)) {
+			throw new Exception('E01');
+		}
+
+		list($header, $payload, $signature) = $this->explodeToken($token);
+		// 시그니처 체크
+		if(EncrypUtil::subStrSalt($signature, env('TOKEN_SALT_LENGTH'))
+			!== EncrypUtil::subStrSalt($this->makeTokenSignature($header, $payload), env('TOKEN_SALT_LENGTH'))) {
+				throw new Exception('E03');
+		}
+
+		// 유효 시간 체크
+		if($this->getPayloadValueToKey($token, 'ext') < time()) {
+			throw new Exception('E02');
+		}
+
+		return true;
+	}
+
+	/**
+	 * 리플래쉬 토큰 DB 저장
+	 * 
+	 * @param string $refreshToken 리플래쉬 토큰
+	 * @return boolean true
+	 */
+	public function upsertRefreshToken(string $refreshToken) {
+		// 리플래쉬 토큰 DB 저장
+		$ext = Carbon::createFromTimestamp($this->getPayloadValueToKey($refreshToken, 'ext'));
+
+		try {
+			DB::beginTransaction();
+			Token::updateOrInsert(
+				['u_pk' => $this->getPayloadValueToKey($refreshToken, 'upk')]
+				,[
+					't_rt' => $refreshToken
+					,'t_ext' => $ext->format('Y-m-d H:i:s')
+				]
+			);
+			DB::commit();
+		} catch (Exception $e) {
+			DB::rollback();
+			Log::error("리플래쉬 토큰 저장 에러".$e->getMessage());
+			throw new MyDBException('E80');
+		}
+
+		return true;
+	}
+
+	
 }
